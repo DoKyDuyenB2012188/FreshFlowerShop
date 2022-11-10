@@ -1,0 +1,49 @@
+@media screen and (max-width : 768px) {
+    .slideshow {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .img_occasion {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .container-dot {
+        right: 4%;
+        top: 80%;
+    }
+}
+
+.img_occasion {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.img_occasion:hover {
+    cursor: pointer;
+    animation: zoom-in-zoom-out 2s ease forwards;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1.1, 1.1);
+    }
+}
+.occasion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    border: 1px solid rgb(247, 247, 247);
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
