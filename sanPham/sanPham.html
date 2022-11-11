@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="./sanPham.css">
+    </head>
+    <body>
+        <header></header>
+        <main class="container">
+            <div class="model_dark"></div>
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="row wapper">
+                <div id="left-menu" class="col-sm-3">
+                    <a class="close_nav d-none" href="javascript:void(0)" onclick="CloseNav();" class="close-filter black"><i class="fas fa-times"></i></a>
+                    <div id="246" class="ctrl-filter">
+                        <h5>Đối tượng - Object</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'nguoiyeu');" id="nguoiyeu">
+                            <label class="form-check-label" >Hoa tặng người yêu</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'banbe');" id="banbe">
+                            <label class="form-check-label" >Hoa tặng bạn bè</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'vo');" id="vo">
+                            <label class="form-check-label" >Hoa tặng vợ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'chong');" id="chong">
+                            <label class="form-check-label" >Hoa tặng chồng</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'me');" id="me">
+                            <label class="form-check-label" >Hoa tặng mẹ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'treem');" id="treem">
+                            <label class="form-check-label" >Hoa tặng trẻ em</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'nu');" id="nu">
+                            <label class="form-check-label" >Hoa tặng cho nữ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'nam');" id="nam">
+                            <label class="form-check-label" >Hoa tặng cho nam</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'sep');" id="sep">
+                            <label class="form-check-label" >Hoa tặng Sếp</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'dongnghiep');" id="dongnghiep">
+                            <label class="form-check-label" >Hoa tặng đồng nghiệp</label>
+                        </div>
+                    </div>
+                    <div id="238" class="ctrl-filter">
+                        <h5>Dịp - Occasion</h5>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoasinhnhat');" id="hoasinhnhat">
+                            <label class="form-check-label">Hoa sinh nhật</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hoakhaitruong');" id="hoakhaitruong">
+                            <label class="form-check-label" >Hoa khai trương</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hoachucmung');" id="hoachucmung">
+                            <label class="form-check-label" >Hoa chúc mừng</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoachiabuon');" id="hoachiabuon">
+                            <label class="form-check-label">Chủ đề hoa chia buồn</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoachucsuckhoe');" id="hoachucsuckhoe">
+                            <label class="form-check-label">Chủ đề hoa chúc sức khỏe</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoatinhyeu');" id="hoatinhyeu">
+                            <label class="form-check-label">Chủ đề hoa tình yêu</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoacamon');" id="hoacamon">
+                            <label class="form-check-label">Chủ đề hoa cảm ơn</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input"type="checkbox" onchange="ChangeState(this, 'hoatotnghiep');" id="hoatotnghiep">
+                            <label class="form-check-label">Chúc mừng tốt nghiệp, thành công</label>
+                        </div>
+                    </div>
+                    <div class="ctrl-filter range-price">
+                        <h5>Mức giá</h5>
+                        <div>
+                            <a  class="active_select filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '0')">Tất cả</a>
+                        </div>
+                        <div>
+                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '0-250000')">Dưới 250.000</a>
+                        </div>
+                        <div>
+                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '250000-500000')">Từ 250.000 đến 500.000</a>
+                        </div>
+                        <div>
+                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '500000-1000000')">Từ 500.000 đến 1.000.000</a>
+                        </div>
+                        <div>
+                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '1000000-2000000')">Từ 1.000.000 đến 2.000.000</a>
+                        </div>
+                        <div>
+                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '2000000-20000000')">Trên 2.000.000</a>
+                        </div>
+                        <div class="small-text">Range price</div>
+                        <div class="input-group form-group d-flex justify-content-center">
+                            <input class="form-control" id="low-price" pattern="[0-9]*" placeholder="Min" onkeypress="HandleSetPrice(event)" value="0">
+                            <!-- <p style="margin: 0px;">&nbsp;To&nbsp;</p> -->
+                            <input class="form-control" id="high-price" pattern="[0-9]*" placeholder="Max" onkeypress="HandleSetPrice(event)" value="0">
+                        </div>
+                        <a href="javascript:void(0);" class="filter_apply" onclick="SetPrice();">Apply</a>
+                    </div>
+                    <div id="217" class="ctrl-filter">
+                        <h5>Cách trình bày</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'bohoa');" id="bohoa">
+                            <label class="form-check-label" >Bó hoa tươi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'giohoa');" id="giohoa">
+                            <label class="form-check-label" >Giỏ hoa</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hophoa');" id="hophoa">
+                            <label class="form-check-label" >Hộp hoa</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hoabinh');" id="hoabinh">
+                            <label class="form-check-label" >Hoa bình</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hoathabinh');" id="hoathabinh">
+                            <label class="form-check-label" >Hoa thả bình</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'langhoachucmung');" id="langhoachucmung">
+                            <label class="form-check-label" >Lẵng hoa chúc mừng</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'langhoachiabuon');" id="langhoachiabuon">
+                            <label class="form-check-label" >Lãng hoa chia buồn</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'chaulanhodiep');" id="chaulanhodiep">
+                            <label class="form-check-label" >Chậu lan hồ điệp</label>
+                        </div>
+                    </div>
+                    <div id="228" class="ctrl-filter">
+                        <h5>Màu sắc</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'trang');" id="trang">
+                            <label class="form-check-label" >White</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'red');" id="red">
+                            <label class="form-check-label" >Màu đỏ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'hong');" id="hong">
+                            <label class="form-check-label" >Pink</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'cam');" id="cam">
+                            <label class="form-check-label" >Hoa tươi màu cam</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'tim');" id="tim">
+                            <label class="form-check-label" >Purple</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'vang');" id="vang">
+                            <label class="form-check-label" >Yellow&amp;Gold</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'xanh');" id="xanh">
+                            <label class="form-check-label" >Blue&amp;Green</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" onchange="ChangeState(this, 'mix');" id="mix">
+                            <label class="form-check-label" >Mix Color</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="content-items" class="col-sm-9">
+                    <nav class="navbar navbar-expand row">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">MẶC ĐỊNH</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GIÁ TỪ THẤP TỚI CAO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GIÁ TỪ CAO ĐẾN THẤP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GIÁ MỚI NHẤT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="data_items" class="row data_items">
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+        <script src="../shared/products.js"></script>
+        <script src="../model/product.js"></script>
+        <script src="./sanPham.js"></script>
+    </body>
+</html>

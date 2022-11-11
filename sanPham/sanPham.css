@@ -1,0 +1,114 @@
+
+/* CSS */
+.filter_a {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 15px;
+  text-decoration: none;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 3px 0;
+  padding: 3px 8px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.filter_apply {
+  align-items: center;
+  text-decoration: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.2em - 1px) 0.5em;
+  margin-top: 5px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-60:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.button-60:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.button-60:hover {
+  border-color: #b5b5b5;
+}
+
+.button-60:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+.active_select{
+    background-color: rgb(232, 246, 255);
+}
+#left-menu{
+    padding: 10px;
+}
+@media screen and (max-width: 920px) {
+    #left-menu{
+        height: 100%;
+        width: 0px;
+        background-color: #485fc7;
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: width .5s;
+        padding: 0;
+        margin: 0;
+    }
+    .data_items{
+      display: flex;
+      justify-content: center;
+    }
+}
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 100000;
+}
+.lazy{
+  object-fit: cover;
+  width: 90%;
+}
+.lazy:hover{
+  transform: scale(1.09);
+}
+.item{
+  width: 23%;
+  height: 27%;
+  margin: 4px;
+}
