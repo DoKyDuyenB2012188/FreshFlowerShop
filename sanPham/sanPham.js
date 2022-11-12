@@ -44,9 +44,15 @@ function toggler_menu(){
 }
 let filter_list = [];
 let price = "";
+let current = 32;
 function render_items(index){
     const product = new Product();
-    const cardList = product.filterProduct(filter_list);
+    let cardList = product.filterProduct(filter_list);
+    if(price != ""){
+        let min = price.split('-')[0];
+        let max = price.split('-')[1];
+        cardList = product.findPrice(min, max, cardList);
+    }
     console.log(cardList);
     let length = cardList.length > index ? index : cardList.length;
     if(cardList != []){
@@ -54,12 +60,24 @@ function render_items(index){
         let dom = '';
         for(let i=0; i< length; i++){
             dom +=`<div class="item col-6 col-sm-3 card">
+                        <div class="d-flex justify-content-between">
+                            ${cardList[i].newitem == true ? `
+                            <span class="bg-info rounded-circle d-flex justify-content-center align-items-center shadow-1-strong" style="width: 35px; height: 35px;">
+                                <p class="text-white mb-0 pb-0 small">New</p>
+                            </span>
+                            `: '<div style="width: 35px; height: 35px;" ></div>'}
+                            ${cardList[i].isale == true ? `
+                            <span class="bg-danger rounded-circle d-flex justify-content-center align-items-center shadow-1-strong" style="width: 35px; height: 35px;">
+                                <p class="text-white mb-0 pb-0 small">Sale</p>
+                            </span>
+                            `: '<div style="width: 35px; height: 35px;" ></div>'}
+                        </div>
                         <div class="i">
                             <a title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">
                                 <img class="lazy card-img-top pt-2" alt="${cardList[i].nameCard}" title="${cardList[i].nameCard}" src="${'https://hoayeuthuong.com/'+cardList[i].imageURL}" style="display: inline;">
                             </a>
                         </div>
-                        <div class="t pb-2">
+                        <div class="t pb-2 mt-3">
                             <a class="text-muted small text-decoration-none" title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">${cardList[i].nameCard}</a>
                             <span class="vn row">
                                 ${cardList[i].oldprice != '' ? `<p class="col-12 col-sm-6 mb-0 oprice small text-danger"><s>${cardList[i].oldprice}</s></p>`: ''}
@@ -72,6 +90,7 @@ function render_items(index){
     }
 }
 function ChangeState(data, id){
+    $('#intro').addClass('d-none');
     if($('#'+id).is(':checked')){
         if(!filter_list.includes(id)){
             filter_list.push(id);
@@ -82,11 +101,29 @@ function ChangeState(data, id){
         });
     }
     if(filter_list != []){
-        render_items(32);
+        render_items(current);
     }
+    console.log($('#data_items').children().length);
+    if($('#data_items').children().length == 0){
+        $('#intro').removeClass('d-none');
+     }
 }
 function ChangePrice(data, price_data){
+    if(price != ""){
+        $('#'+ price).removeClass('active_select');
+    }
     price = price_data;
-    render_items();
+    console.log(price);
+    $('#'+price).addClass('active_select');
+    render_items(current);
+}
+function HandleSetPrice(evt){
+
+}
+function SetPrice(){
+   let min = document.getElementById('low-price').value;
+   let max = document.getElementById('high-price').value;
+   new_price = min +'-'+max;
+   ChangePrice(null, new_price);
 }
 

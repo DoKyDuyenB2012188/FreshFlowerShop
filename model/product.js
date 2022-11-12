@@ -2,13 +2,13 @@ class Product {
   constructor() {
     this.data = products;
   }
-  findNewProduct() {
+  findNewProduct() {// tim kiem san pham moi
     return this.data.filter((product) => product.newitem == true);
   }
-  findSaleProduct() {
+  findSaleProduct() {// cac san pham dang sale
     return this.data.filter((product) => product.isale == true);
   }
-  findOccasion(occasion) {
+  findOccasion(occasion) {// tim kiem theo mang chu de
     let result = [];
     this.data.forEach((item) => {
       occasion.forEach((se) => {
@@ -20,7 +20,7 @@ class Product {
     });
     return result;
   }
-  findStyle(style) {
+  findStyle(style) { // tim kiem theo mang loai hoa
     let result = [];
     this.data.forEach((item) => {
       style.forEach((se) => {
@@ -32,7 +32,7 @@ class Product {
     });
     return result;
   }
-  findObject(object) {
+  findObject(object) {// tim kiem theo mang doi tuong
     let result = [];
     this.data.forEach((item) => {
       object.forEach((se) => {
@@ -44,7 +44,7 @@ class Product {
     });
     return result;
   }
-  findColor(color) {
+  findColor(color) { // tim kiem theo mang mau
     let result = [];
     this.data.forEach((item) => {
       color.forEach((se) => {
@@ -56,8 +56,18 @@ class Product {
     });
     return result;
   }
-  
-  filterProduct(filter_list) {
+  findPrice(min, max, data){
+    let result = data.filter((item) => {
+      let accsess_str = item.newprice.split(' ')[0].split('.');
+      let price = '';
+      for(let i=0; i<accsess_str.length; i++){
+        price += accsess_str[i];
+      }
+      return (Number(price) >= Number(min) && Number(price) <= Number(max))
+    });
+    return result;
+  }
+  filterProduct(filter_list) { // tim kiem tong hop
     let result = [];
     let occasion = this.findOccasion(filter_list);
     // console.log('occasion');
@@ -94,7 +104,7 @@ class Product {
       let finish = [];
       const style_color = ['trang', 'hong', 'red', 'vang', 'xanh', 'cam', 'tim', 'mix'];
       const search_color = filter_list.filter(value => style_color.includes(value));// loc mau can tim
-      console.log(search_color);
+      // console.log(search_color);
       result.forEach((item) => {
         if(search_color.every(element => item.color.indexOf(element) > -1)){
           finish.push(item);

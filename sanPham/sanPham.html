@@ -13,24 +13,30 @@
         <header></header>
         <main class="container">
             <div class="model_dark"></div>
-            <nav class="navbar navbar-expand">
+            <nav class="navbar navbar-expand pb-0">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link nav-link-fix" href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link nav-link-fix" href="#">Hoa sinh nhật</a>
+                    </li>
+                    <li>
+                        <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link nav-link-fix" href="#">Hoa tặng người yêu</a>
                     </li>
                 </ul>
             </nav>
             <div class="row wapper">
-                <div id="left-menu" class="col-sm-3">
+                <div id="left-menu" class="col-sm-3 pt-0">
                     <a class="close_nav d-none" href="javascript:void(0)" onclick="CloseNav();" class="close-filter black"><i class="fas fa-times"></i></a>
                     <div id="246" class="ctrl-filter">
                         <h5>Đối tượng - Object</h5>
@@ -113,28 +119,28 @@
                     <div class="ctrl-filter range-price">
                         <h5>Mức giá</h5>
                         <div>
-                            <a  class="active_select filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '0')">Tất cả</a>
+                            <a  class="filter_a" href="javascript:void(0);" id="0-9999999999" onclick="ChangePrice(this, '0-9999999999')">Tất cả</a>
                         </div>
                         <div>
-                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '0-250000')">Dưới 250.000</a>
+                            <a class="filter_a" href="javascript:void(0);" id="0-250000" onclick="ChangePrice(this, '0-250000')">Dưới 250.000</a>
                         </div>
                         <div>
-                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '250000-500000')">Từ 250.000 đến 500.000</a>
+                            <a class="filter_a" href="javascript:void(0);" id="250000-500000" onclick="ChangePrice(this, '250000-500000')">Từ 250.000 đến 500.000</a>
                         </div>
                         <div>
-                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '500000-1000000')">Từ 500.000 đến 1.000.000</a>
+                            <a class="filter_a" href="javascript:void(0);" id="500000-1000000" onclick="ChangePrice(this, '500000-1000000')">Từ 500.000 đến 1.000.000</a>
                         </div>
                         <div>
-                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '1000000-2000000')">Từ 1.000.000 đến 2.000.000</a>
+                            <a class="filter_a" href="javascript:void(0);" id="1000000-2000000" onclick="ChangePrice(this, '1000000-2000000')">Từ 1.000.000 đến 2.000.000</a>
                         </div>
                         <div>
-                            <a class="filter_a" href="javascript:void(0);" onclick="ChangePrice(this, '2000000-20000000')">Trên 2.000.000</a>
+                            <a class="filter_a" href="javascript:void(0);" id="2000000-20000000" onclick="ChangePrice(this, '2000000-20000000')">Trên 2.000.000</a>
                         </div>
                         <div class="small-text">Range price</div>
                         <div class="input-group form-group d-flex justify-content-center">
-                            <input class="form-control" id="low-price" pattern="[0-9]*" placeholder="Min" onkeypress="HandleSetPrice(event)" value="0">
+                            <input class="form-control" id="low-price" pattern="[0-9]*" placeholder="Min" value="0">
                             <!-- <p style="margin: 0px;">&nbsp;To&nbsp;</p> -->
-                            <input class="form-control" id="high-price" pattern="[0-9]*" placeholder="Max" onkeypress="HandleSetPrice(event)" value="0">
+                            <input class="form-control" id="high-price" pattern="[0-9]*" placeholder="Max" value="0">
                         </div>
                         <a href="javascript:void(0);" class="filter_apply" onclick="SetPrice();">Apply</a>
                     </div>
@@ -210,24 +216,27 @@
                     </div>
                 </div>
                 <div id="content-items" class="col-sm-9">
-                    <nav class="navbar navbar-expand row">
-                        <ul class="navbar-nav">
+                    <nav class="navbar navbar-expand row pt-0">
+                        <ul class="navbar-nav d-flex justify-content-center">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">MẶC ĐỊNH</a>
+                                <a class="nav-link text-size a_active" href="#">MẶC ĐỊNH</a>
+                            </li>
+                            <li class="nav-item text">
+                                <a class="nav-link text-size a_animation" href="#">GIÁ TỪ THẤP TỚI CAO</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">GIÁ TỪ THẤP TỚI CAO</a>
+                                <a class="nav-link text-size a_animation" href="#">GIÁ TỪ CAO ĐẾN THẤP</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">GIÁ TỪ CAO ĐẾN THẤP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">GIÁ MỚI NHẤT</a>
+                                <a class="nav-link text-size a_animation" href="#">GIÁ MỚI NHẤT</a>
                             </li>
                         </ul>
                     </nav>
+                    <div class="col-12 col-sm-12 text-center intro" id="intro">
+                        <img class="intro_img" width="30%" src="../public/image/blooming-spring-flowers.jpg">
+                        <h4 style="font-size: 2rem;" class="font">Hãy Lựa Chọn Hoa Cần Tìm</h4>
+                    </div>
                     <div id="data_items" class="row data_items">
-                        
                     </div>
                 </div>
             </div>

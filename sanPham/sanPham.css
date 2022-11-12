@@ -1,5 +1,34 @@
 
 /* CSS */
+@font-face {
+  font-family: yessy;
+  src: url(../public/font/Yessy\ Font\ by\ Situjuh\ \(7NTypes\).otf);
+}
+@font-face {
+  font-family: Arimo;
+  src: url(../public/font/Arimo-VariableFont_wght.ttf);
+}
+*{
+  box-sizing: border-box;
+  font-family: ArchivoNarrow;
+}
+.font{
+  font-family: yessy;
+}
+.intro{
+  margin-top: 10%;
+  opacity: 0.4;
+}
+.nav-link-fix{
+  padding-left: 0px !important;
+  color:grey;
+}
+.nav-link-fix:hover{
+  color: grey;
+}
+.text-size{
+  font-size: 100%;
+}
 .filter_a {
   background-color: rgba(51, 51, 51, 0.05);
   border-radius: 15px;
@@ -73,6 +102,62 @@
 }
 #left-menu{
     padding: 10px;
+}
+.a_active {
+  position: relative;
+  padding-bottom: 0px;
+  color: #54b3d6;
+  background-size: 200% 100%;
+  background-position: -100%;
+}
+.a_active:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 5%;
+  width: 90%;
+  height: 3px;
+}
+.a_active:hover{
+  color: #54b3d6;
+}
+.a_animation {
+  position: relative;
+  padding-bottom: 0px;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.a_animation:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 5%;
+  width: 0;
+  height: 3px;
+}
+.a_animation:hover {
+  background-position: 0;
+ }
+ .a_animation:hover::before {
+  width: 90%;
+}
+@media screen and (max-width: 991px) {
+  .text-size{
+    font-size: 85%;
+  }
 }
 @media screen and (max-width: 920px) {
     #left-menu{

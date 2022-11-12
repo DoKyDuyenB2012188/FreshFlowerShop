@@ -13039,5 +13039,203 @@ let products = [
 			],
 			intro: "Cuộc sống bộn bề cuốn con người vào biết bao nỗi lo toan, suy nghĩ. Đôi lúc chúng ta cần một khoảng lặng cho riêng mình. \"Bản nhạc dịu êm\" với sự kết hợp của hoa hồng da và hoa phụ sẽ đem đến cho người nhìn cảm giác nhẹ nhàng, thư thái. \"Bản nhạc dịu êm\" là món quà ý nghĩa dành cho những người bạn quan tâm, yêu quý, thay bạn đem đến cảm giác bình yên, xua tan mệt mỏi giữa cuộc sống xô bồ, nhộn nhịp này."
 		}
-	}
+	},
+		{
+			"id": "11687_chau-lan-tim-1-canh-01",
+			"nameCard": "Chậu lan tím 1 cành 01",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/11687_chau-lan-tim-1-canh-01.jpg",
+			"newprice": "350.000 đ",
+			"oldprice": "400.000 đ",
+			"newitem": false,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Chậu lan tím 1 cành 01 - 11687",
+				"old_price": "400.000 đ",
+				"price": "350.000 đ",
+				"descriptions": [
+					"Chậu sứ tròn trơn: 1",
+					"Hồ điệp tím: 1"
+				],
+				"intro": "Lan hồ điệp tím là biểu tượng cho sự lãng mạn và trang trọng. Có lẽ vậy, mà những người yêu nhau, hay tặng nhau những cành hồ điệp tím, như một lời giải bày về tình yêu, một sự chờ mong, một tình yêu lãng mạn...."
+			}
+		},
+		{
+			"id": "11129_tam-an",
+			"nameCard": "Tâm an",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/11129_tam-an.jpg",
+			"newprice": "885.000 đ",
+			"oldprice": "960.000 đ",
+			"newitem": false,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Tâm an - 11129",
+				"old_price": "960.000 đ",
+				"price": "885.000 đ",
+				"descriptions": [
+					"Chậu sứ trụ bo 12x12: 1",
+					"Hồ điệp trắng: 3"
+				],
+				"intro": "Lan hồ điệp trắng từ lâu đã được mệnh danh là nữ hoàng của các loài hoa, đại diện cho sự tinh khiết và quý phái. Ngày nay, lan hồ điệp trắng đã trở thành một món quà tặng sang trọng được gửi đến trong những dịp lễ tết, chúc mừng khai trương cho người thân, bạn bè, đối tác."
+			}
+		},
+		{
+			"id": "12319_chau-lan-hong-5-canh-01",
+			"nameCard": "Chậu lan hồng 5 cành 01",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/12319_chau-lan-hong-5-canh-01.jpg",
+			"newprice": "1.375.000 đ",
+			"oldprice": "1.500.000 đ",
+			"newitem": true,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Chậu lan hồng 5 cành 01 - 12319",
+				"old_price": "1.500.000 đ",
+				"price": "1.375.000 đ",
+				"descriptions": [
+					"Chậu sứ tổ ong : 1",
+					"Hồ điệp hồng: 5"
+				],
+				"intro": "Lan hồ điệp tượng trưng cho tình yêu thương thuần khiết và sự quý phái, sang trọng. Sản phẩm sẽ là món quà tuyệt vời dành cho người mà bạn yêu thương. **** Do tình hình nguyên vật liệu, phụ kiện dịp Lễ tạm thời không ổn định, chúng tôi xin phép thay thế chậu sứ trồng lan hồ điệp sang mẫu chậu khác phù hợp và đảm bảo vẫn giữ được tính thẩm mỹ và nghệ thuật cho từng mẫu. Rất mong quý khách hàng thông cảm!"
+			}
+		},
+		{
+			"id": "11126_khu-vuon-xuan",
+			"nameCard": "Khu vườn xuân",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/11126_khu-vuon-xuan.jpg",
+			"newprice": "885.000 đ",
+			"oldprice": "960.000 đ",
+			"newitem": false,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Khu vườn xuân - 11126",
+				"old_price": "960.000 đ",
+				"price": "885.000 đ",
+				"descriptions": [
+					"Hồ điệp hồng: 1",
+					"Hồ điệp tím: 2"
+				],
+				"intro": "Hoa lan hồ điệp được nhiều người biết đến với vẻ đẹp tuyệt vời, kiêu sa thu hút mọi ánh nhìn. Đây cũng là loài hoa được ưa chuộng chưng trong nhà vào ngày tết không chỉ nhờ vào vẻ đẹp trang nhã, sang trọng mà chúng còn mang ý nghĩa phong thủy và biểu tượng tâm linh, tài lộc, vượng khí cho gia đình trong ngày tết."
+			}
+		},
+		{
+			"id": "9415_loc-troi",
+			"nameCard": "Lộc trời",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/9415_loc-troi.jpg",
+			"newprice": "825.000 đ",
+			"oldprice": "",
+			"newitem": false,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Lộc trời - 9415",
+				"old_price": "852.000 đ",
+				"price": "825.000 đ",
+				"descriptions": [
+					"Hồ điệp vàng: 3",
+					"Hoa sao vàng: 3"
+				],
+				"intro": "Chậu lan được thiết kế bởi 3 cành lan vàng, tạo cho người ngắm nhín cảm giác nhẹ dịu, ấm ấp như ánh nắng ban mai, và cũng như lời cầu chúc ấm no, thịnh vượng cho gia đình."
+			}
+		},
+		{
+			"id": "13138_good-way",
+			"nameCard": "Good way",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/13138_good-way.jpg",
+			"newprice": "2.750.000 đ",
+			"oldprice": "",
+			"newitem": true,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Good way - 13138",
+				"old_price": "2.777.000 đ",
+				"price": "2.750.000 đ",
+				"descriptions": [
+					"Hồ điệp vàng: 10"
+				],
+				"intro": ""
+			}
+		},
+		{
+			"id": "13595_lan-ho-diep-mau-9",
+			"nameCard": "Lan hồ điệp mẫu 9",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/13595_lan-ho-diep-mau-9.jpg",
+			"newprice": "2.200.000 đ",
+			"oldprice": "2.400.000 đ",
+			"newitem": true,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Lan hồ điệp mẫu 9 - 13595",
+				"old_price": "2.400.000 đ",
+				"price": "2.200.000 đ",
+				"descriptions": [
+					"Hồ điệp hồng: 8"
+				],
+				"intro": ""
+			}
+		},
+		{
+			"id": "7779_phat-tai",
+			"nameCard": "Phát tài",
+			"imageURL": "/hinh-hoa-tuoi/thumb/nguoi-yeu/7779_phat-tai.jpg",
+			"newprice": "550.000 đ",
+			"oldprice": "600.000 đ",
+			"newitem": false,
+			"isale": false,
+			"occasion": [],
+			"object": [],
+			"style": [
+				"chau lan ho diep"
+			],
+			"color": [],
+			"detail": {
+				"name_title": "Lover - Phát tài - 7779",
+				"old_price": "600.000 đ",
+				"price": "550.000 đ",
+				"descriptions": [
+					"Chậu sứ trụ bẹt S2 16x7: 1",
+					"Hồ điệp tím: 2"
+				],
+				"intro": "“ Phát Tài” gồm 2 cành lan tím, mang ý nghĩa cầu chúc sự may mắn, thịnh vượng và có sức khỏe tốt, làm việc gì cũng thành công. Thích hợp tặng khai trương, quà Tết cho doanh nghiệp, đối tác hoặc bạn bè."
+			}
+		}
 ];
