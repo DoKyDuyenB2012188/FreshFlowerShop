@@ -45,6 +45,7 @@ function toggler_menu(){
 let filter_list = [];
 let price = "";
 let current = 32;
+let lenght_products = 0;
 function render_items(index){
     const product = new Product();
     let cardList = product.filterProduct(filter_list);
@@ -53,8 +54,9 @@ function render_items(index){
         let max = price.split('-')[1];
         cardList = product.findPrice(min, max, cardList);
     }
-    console.log(cardList);
+    lenght_products = cardList.length;
     let length = cardList.length > index ? index : cardList.length;
+    current = length;
     if(cardList != []){
         document.getElementById('data_items').innerHTML = '';
         let dom = '';
@@ -89,8 +91,16 @@ function render_items(index){
         document.getElementById('data_items').innerHTML = dom;
     }
 }
+function resetCount(){
+    current = 32;
+    lenght_products = 0;
+    if(lenght_products == 0){
+        $('.more').text(`Xem thêm sảm phẩm còn lại`);
+    }
+}
 function ChangeState(data, id){
-    $('#intro').addClass('d-none');
+    resetCount();
+    $('#intro').addClass('d-none'); // process intro disappear when render data_items
     if($('#'+id).is(':checked')){
         if(!filter_list.includes(id)){
             filter_list.push(id);
@@ -102,23 +112,28 @@ function ChangeState(data, id){
     }
     if(filter_list != []){
         render_items(current);
+        $('.more').removeClass('d-none');
     }
-    console.log($('#data_items').children().length);
-    if($('#data_items').children().length == 0){
+    if($('#data_items').children().length == 0){// process intro show when  data_items empty
         $('#intro').removeClass('d-none');
-     }
+        $('.more').addClass('d-none');
+    }
 }
 function ChangePrice(data, price_data){
     if(price != ""){
         $('#'+ price).removeClass('active_select');
     }
     price = price_data;
-    console.log(price);
     $('#'+price).addClass('active_select');
     render_items(current);
 }
-function HandleSetPrice(evt){
-
+function showMore(){
+    current += 8;
+    render_items(current);
+    // console.log(lenght_products);
+    // console.log(current);
+    // console.log(Number(lenght_products - current));
+    $('.more').text(`Xem thêm, sản phẩm còn lại ${Number(lenght_products - current)}`);
 }
 function SetPrice(){
    let min = document.getElementById('low-price').value;
