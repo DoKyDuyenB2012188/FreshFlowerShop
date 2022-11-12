@@ -47,6 +47,7 @@ let price = "";
 function render_items(index){
     const product = new Product();
     const cardList = product.filterProduct(filter_list);
+    console.log(cardList);
     let length = cardList.length > index ? index : cardList.length;
     if(cardList != []){
         document.getElementById('data_items').innerHTML = '';
