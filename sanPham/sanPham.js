@@ -61,7 +61,7 @@ function render_items(index){
         document.getElementById('data_items').innerHTML = '';
         let dom = '';
         for(let i=0; i< length; i++){
-            dom +=`<div class="item col-6 col-sm-3 card">
+            dom +=`<div class="item col-6 col-sm-6 col-md-3 card">
                         <div class="d-flex justify-content-between">
                             ${cardList[i].newitem == true ? `
                             <span class="bg-info rounded-circle d-flex justify-content-center align-items-center shadow-1-strong" style="width: 35px; height: 35px;">

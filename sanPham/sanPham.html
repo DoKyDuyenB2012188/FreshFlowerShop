@@ -13,28 +13,27 @@
         <header></header>
         <main class="container">
             <div class="model_dark"></div>
-            <nav class="navbar navbar-expand pb-0">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link nav-link-fix" href="#">Trang chủ</a>
-                    </li>
-                    <li>
-                        <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-fix" href="#">Hoa sinh nhật</a>
-                    </li>
-                    <li>
-                        <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-fix" href="#">Hoa tặng người yêu</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="content_top">
+                <div class="ft_content overflow-auto d-inline-block">
+                    <div class="content_nav_top">
+                        <div class="filter-item d-inline-block">
+                            <a class="item_nav_top filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
+                        </div>
+                        <div class="d-inline-block">
+                          <a class="item_nav_top active " href="#">Trang chủ</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                        <div class="d-inline-block">
+                          <a class="item_nav_top " href="#">Hoa sinh nhật</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                        <div class="d-inline-block">
+                          <a class="item_nav_top " href="#">Hoa tặng người yêu</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row wapper">
                 <div id="left-menu" class="col-sm-3 pt-0">
                     <a class="close_nav d-none" href="javascript:void(0)" onclick="CloseNav();" class="close-filter black"><i class="fas fa-times"></i></a>
@@ -216,29 +215,31 @@
                     </div>
                 </div>
                 <div id="content-items" class="col-sm-9">
-                    <nav class="navbar navbar-expand row pt-0">
-                        <ul class="navbar-nav d-flex justify-content-center">
-                            <li class="nav-item active">
-                                <a class="nav-link text-size a_active" href="#">MẶC ĐỊNH</a>
-                            </li>
-                            <li class="nav-item text">
-                                <a class="nav-link text-size a_animation" href="#">GIÁ TỪ THẤP TỚI CAO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-size a_animation" href="#">GIÁ TỪ CAO ĐẾN THẤP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-size a_animation" href="#">GIÁ MỚI NHẤT</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="ft_content overflow-auto text-center">
+                        <div class="content_nav" style="display: inline-block;">
+                            <div class="item_nav" style="display: inline-block;">
+                              <a class="a_active" href="#">MẶC ĐỊNH</a>
+                            </div>
+                            <div class="item_nav" style="display: inline-block;">
+                              <a class="a_animation " href="#">GIÁ TỪ CAO ĐẾN THẤP</a>
+                            </div>
+                            <div class="item_nav" style="display: inline-block;">
+                              <a class="a_animation " href="#">GIÁ TỪ THẤP ĐẾN CAO</a>
+                            </div>
+                            <div class="item_nav" style="display: inline-block;">
+                              <a class="a_animation " href="#" tabindex="-1" aria-disabled="true">MỚI NHẤT</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-12 col-sm-12 text-center intro" id="intro">
                         <img class="intro_img" width="30%" src="../public/image/blooming-spring-flowers.jpg">
                         <h4 style="font-size: 2rem;" class="font">Hãy Lựa Chọn Hoa Cần Tìm</h4>
                     </div>
                     <div id="data_items" class="row data_items">
                     </div>
-                    <button class="filter_apply more d-none" onclick="showMore();">Xem thêm sản phẩm còn lại</button>
+                    <div class="d-flex justfy-content-center">
+                        <button class="filter_apply more d-none" onclick="showMore();">Xem thêm sản phẩm còn lại</button>
+                    </div>
                 </div>
             </div>
         </main>

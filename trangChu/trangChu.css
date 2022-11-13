@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Asap;
+    src: url(../public/font/Asap-VariableFont_wght.ttf);
+}
+*{
+    font-family: Asap;
+}
+@media screen and (max-width : 768px) {
+    .slideshow {
+        display: none;
+    }
+}
+.img_occasion{
+    width: 100%;
+}
+.item_occasion{
+    width: 180px;
+    text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .container-dot {
+        right: 4%;
+        top: 80%;
+    }
+}
+
+.img_occasion {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: transform .3s;
+}
+
+.img_occasion:hover {
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.occasion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    border: 1px solid rgb(247, 247, 247);
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 435px) {
+    .item{
+        width: 150px !important;
+    }
+}
+.item{
+    width: 200px;
+    margin: 4px;
+    text-align: center;
+}
+.content_sale{
+    background-color: rgb(255, 230, 221);
+    margin: 20px;
+    padding: 10px;
+}
+.content_new{
+    background-color: rgb(212, 233, 255);
+    margin: 20px;
+    padding: 10px;
+}
+.lazy:hover{
+    transform: scale(1.09);
+  }
+.lazy{
+    object-fit: cover;
+    width: 70%;
+  }
+.title{
+    margin-left: 40px;
+}
+.content_items{
+    width: 100%;
+}
+#nav ul li{
+    display: inline;
+}
