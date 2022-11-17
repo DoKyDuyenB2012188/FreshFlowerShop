@@ -46,13 +46,24 @@ let filter_list = [];
 let price = "";
 let current = 32;
 let lenght_products = 0;
+let sort_Price = "";
 function render_items(index){
     const product = new Product();
+    console.log(sort_Price);
     let cardList = product.filterProduct(filter_list);
     if(price != ""){
         let min = price.split('-')[0];
         let max = price.split('-')[1];
         cardList = product.findPrice(min, max, cardList);
+    }
+    if(sort_Price == 'maxtomin'){
+        cardList = product.sortMaxToMin(cardList);
+    }
+    else if(sort_Price == 'mintomax'){
+        cardList = product.sortMinToMax(cardList);
+    }
+    else if(sort_Price == 'newPrice'){
+        cardList = product.sortNewPrice(cardList);
     }
     lenght_products = cardList.length;
     let length = cardList.length > index ? index : cardList.length;
@@ -75,12 +86,12 @@ function render_items(index){
                             `: '<div style="width: 35px; height: 35px;" ></div>'}
                         </div>
                         <div class="i">
-                            <a title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">
+                            <a title="${cardList[i].nameCard}" href="#" onClick="showDetail('${cardList[i].id}')">
                                 <img class="lazy card-img-top pt-2" alt="${cardList[i].nameCard}" title="${cardList[i].nameCard}" src="${'https://hoayeuthuong.com/'+cardList[i].imageURL}" style="display: inline;">
                             </a>
                         </div>
                         <div class="t pb-2 mt-3">
-                            <a class="text-muted small text-decoration-none" title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">${cardList[i].nameCard}</a>
+                            <a class="text-muted small text-decoration-none" href="#" title="${cardList[i].nameCard}" onClick="showDetail('${cardList[i].id}');">${cardList[i].nameCard}</a>
                             <span class="vn row">
                                 ${cardList[i].oldprice != '' ? `<p class="col-12 col-sm-6 mb-0 oprice small text-danger"><s>${cardList[i].oldprice}</s></p>`: ''}
                                 <p class="text-dark mb-0 small onew col-12 col-sm-6">${cardList[i].newprice}</p>
@@ -127,12 +138,19 @@ function ChangePrice(data, price_data){
     $('#'+price).addClass('active_select');
     render_items(current);
 }
+function sortPrice(data, price_data){
+    if(sort_Price != ""){
+        $('#'+ sort_Price).removeClass('a_active');
+        $('#'+sort_Price).addClass('a_animation');
+    }
+    sort_Price = price_data;
+    $('#'+sort_Price).addClass('a_active');
+    $('#'+sort_Price).removeClass('a_animation');
+    render_items(current);
+}
 function showMore(){
     current += 8;
     render_items(current);
-    // console.log(lenght_products);
-    // console.log(current);
-    // console.log(Number(lenght_products - current));
     $('.more').text(`Xem thêm, sản phẩm còn lại ${Number(lenght_products - current)}`);
 }
 function SetPrice(){
@@ -142,3 +160,10 @@ function SetPrice(){
    ChangePrice(null, new_price);
 }
 
+function showDetail(id){
+    if(typeof window.localStorage['show'] != undefined){
+        window.localStorage.removeItem('show');
+    }
+    window.localStorage.setItem('show',id);
+    window.location.href = './chiTietSanPham.html';
+}

@@ -27,12 +27,12 @@ function render_items(label){
             `: '<div style="width: 35px; height: 35px;" ></div>'}
         </div>
         <div class="i">
-            <a title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">
+            <a title="${cardList[i].nameCard}" href="#" onClick="showDetail('${cardList[i].id}');">
                 <img class="lazy card-img-top pt-2" alt="${cardList[i].nameCard}" title="${cardList[i].nameCard}" src="${'https://hoayeuthuong.com/'+cardList[i].imageURL}" style="display: inline;">
             </a>
         </div>
         <div class="t pb-2 mt-3">
-            <a class="text-muted small text-decoration-none" title="${cardList[i].nameCard}" href="${'./chitietsanpham.html/'+cardList[i].id}">${cardList[i].nameCard}</a>
+            <a class="text-muted small text-decoration-none" title="${cardList[i].nameCard}" href="#" href="#" onClick="showDetail('${cardList[i].id}');">${cardList[i].nameCard}</a>
             <span class="vn row">
                 ${cardList[i].oldprice != '' ? `<p class="col-12 col-sm-6 mb-0 oprice small text-danger"><s>${cardList[i].oldprice}</s></p>`: ''}
                 <p class="text-dark mb-0 small onew col-12 col-sm-6">${cardList[i].newprice}</p>
@@ -43,3 +43,10 @@ function render_items(label){
     document.getElementById(label).innerHTML = dom;
 }
 
+function showDetail(id){
+    if(typeof window.localStorage['show'] != undefined){
+        window.localStorage.removeItem('show');
+    }
+    window.localStorage.setItem('show',id);
+    window.location.href = '../sanPham/chiTietSanPham.html';
+}

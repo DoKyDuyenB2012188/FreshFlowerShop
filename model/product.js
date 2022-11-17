@@ -70,17 +70,9 @@ class Product {
   filterProduct(filter_list) { // tim kiem tong hop
     let result = [];
     let occasion = this.findOccasion(filter_list);
-    // console.log('occasion');
-    // console.log(occasion);
     let object = this.findObject(filter_list);
-    // console.log(object);
-    // console.log('object');
     let style = this.findStyle(filter_list);
-    // console.log(style);
-    // console.log('style');
     let color = this.findColor(filter_list);
-    // console.log('color');
-    // console.log(color);
     if(occasion.length != 0){
       result.push(...occasion);
     }
@@ -104,7 +96,6 @@ class Product {
       let finish = [];
       const style_color = ['trang', 'hong', 'red', 'vang', 'xanh', 'cam', 'tim', 'mix'];
       const search_color = filter_list.filter(value => style_color.includes(value));// loc mau can tim
-      // console.log(search_color);
       result.forEach((item) => {
         if(search_color.every(element => item.color.indexOf(element) > -1)){
           finish.push(item);
@@ -117,7 +108,50 @@ class Product {
     let set = new Set(result);
     return Array.from(set);
   }
-  addProduct() {}
-  deleteProduct() {}
-  updateProduct() {}
+  findOne(id){
+    return this.data.filter((item) => item.id == id);
+  }
+  sortMinToMax(cardList){
+    return cardList.sort((a,b) => {
+      let a_t = a.newprice.split(' ')[0].split('.');
+      let b_t = b.newprice.split(' ')[0].split('.');
+      let price_a = "";
+      let price_b = "";
+      for(let i =0; i<a_t.length ;i++){
+        price_a += a_t[i];
+      }
+      for(let i =0; i<b_t.length ;i++){
+        price_b += b_t[i];
+      }
+      return price_a - price_b;
+    });
+  }
+  sortMaxToMin(cardList){
+    return cardList.sort((a,b) => {
+      let a_t = a.newprice.split(' ')[0].split('.');
+      let b_t = b.newprice.split(' ')[0].split('.');
+      let price_a = "";
+      let price_b = "";
+      for(let i =0; i<a_t.length ;i++){
+        price_a += a_t[i];
+      }
+      for(let i =0; i<b_t.length ;i++){
+        price_b += b_t[i];
+      }
+      return price_b - price_a;
+    });
+  }
+  sortNewPrice(cardList){
+    return cardList.filter((item) => item.oldprice != "");
+  }
+  addProduct(item) {
+    return this.data.push(item);
+  }
+  deleteProduct(id) {
+    return this.data.filter((item) => item.id != id);
+  }
+  updateProduct(id, item) {
+    this.deleteProduct(id);
+    this.addProduct(item);
+  }
 }

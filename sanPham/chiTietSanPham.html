@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./sanPham.css">
+    <link rel="stylesheet" href="./chiTietSanPham.css">
+</head>
+<body>
+    <header></header>
+    <main class="container">
+        <div class="row">
+            <div class="content_nav_top">
+                <div class="filter-item d-inline-block">
+                    <a class="item_nav_top filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
+                </div>
+                <div class="d-inline-block">
+                  <a class="item_nav_top active " href="../trangChu/trangChu.html">Trang chủ</a>
+                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                </div>
+                <div class="d-inline-block">
+                  <a class="item_nav_top " href="./sanPham.html">Sản phẩm</a>
+                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                </div>
+                <div class="d-inline-block">
+                  <a class="item_nav_top " href="#">Hoa tặng người yêu</a>
+                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image_content col-12 col-sm-4 text-center">
+                <img id="image_item" style="width:80%" src="">
+            </div>
+            <div class="detail_item col-12 col-sm-8">
+                <h4 id="title_item" class="text-danger"></h4>
+               <div class="price d-flex justify-content-between align-items-center">
+                   <p id="oldprice" class="text-dark small mb-0"><s></s></p>
+                   <h4 id="newprice" class="text-danger mb-0"><b></b></h4>
+               </div>
+               <small><i>Giá đã bao gồm 8% VAT</i></small>
+               <hr>
+               <div>
+                    <p id="intro">
+                        
+                    </p>
+                    <div>
+                        <ul id="des" style="list-style: none;padding: 0px;"></ul>
+                    </div>
+                    <small><i>Sản phẩm thực nhận có thể khác với hình đại diện trên website (đặc điểm thủ công và tính chất tự nhiên của hàng nông nghiệp)</i></small>
+                    <h6>Hoa giao nhanh 60 phút Hồ Chí Minh</h6>
+               </div>
+               <div class="warn row">
+                    <fieldset class="hm-fieldset">
+                        <legend class="hm-legend">LƯU Ý</legend>
+                        <p class="warn_text">Sản phẩm bạn đang chọn là sản phẩm được thiết kế đặc biệt!<br>Hiện nay, Hoayeuthuong.com chỉ thử nghiệm cung cấp cho thị trường Tp. Hồ Chí Minh và Hà Nội</p>
+                    </fieldset>
+               </div>
+               <div class="get row">
+                    <button type="button" class=" col-6 col-sm-3 get_btn1 btn btn-outline-warning btn-rounded" data-mdb-ripple-color="dark">Thêm vào giỏ hàng</button>
+                    <button type="button" class=" col-6 col-sm-3 get_btn2 btn btn-danger btn-rounded">Mua Ngay</button>
+                    <button type="button" class=" col-12 col-sm-6 get_btn3 btn btn-outline-success btn-rounded d-block mt-0" data-mdb-ripple-color="dark">Gọi ngay</button>
+               </div>
+               <div class="row">
+                <fieldset class="hm-fieldset">
+                    <legend class="hm-legend">ƯU ĐÃI ĐẶC BIỆT</legend>
+                        <ol>
+                            <li style="color: rgb(40, 138, 214);">Tặng Banner Hoặc Thiệp (Trị Giá 20.000đ - 50.000đ) Miễn Phí</li>
+                            <li style="color: rgb(40, 138, 214);">Giảm Tiếp 3% Cho Đơn Hàng Bạn Tạo ONLINE Lần Thứ 2, 5% Cho Đơn Hàng Bạn Tạo ONLINE Lần Thứ 6 Và 10% Cho Đơn Hàng Bạn Tạo ONLINE Lần Thứ 12.</li>
+                            <li style="color: rgb(40, 138, 214);">Giao Miễn Phí Trong Nội Thành 63/63 Tỉnh</li>
+                            <li style="color: rgb(40, 138, 214);">Giao Gấp Trong Vòng 2 Giờ</li>
+                            <li style="color: rgb(40, 138, 214);">Cam Kết 100% Hoàn Lại Tiền Nếu Bạn Không Hài Lòng</li>
+                            <li style="color: rgb(40, 138, 214);">Cam Kết Hoa Tươi Trên 3 Ngày</li>
+                            <li style="color: rgb(40, 138, 214);">Cam Kết Hoa Tươi Trên 3 Ngày</li>
+                        </ol>
+                    </fieldset>
+               </div>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+    <script src="../shared/products.js"></script>
+    <script src="../model/product.js"></script>
+    <script src="./chiTietSanPham.js"></script>
+</body>
+</html>
