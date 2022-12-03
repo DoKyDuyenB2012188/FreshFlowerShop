@@ -4,11 +4,11 @@ $(document).ready(function(){
   
   function addfile(){
     $("header").html(`
-    <div class="container-fluid p-0" id="header">
+    <div class="container-fluid p-0 overflow-hidden" id="header">
     <div id="flower" class="overflow-hidden d-flex justify-content-between p-0 m-0" style="background-color: rgb(252, 181, 65);width:100%; height:40px">
         
     </div>
-    <div class="row d-flex justify-content-around">
+    <div class="row d-flex justify-content-around overflow-hidden" >
         <div class="logo col-6 col-md-3 d-flex text-center flex-column justify-content-center align-items-center" >
             <a style="width: 300px;" href="../index.html"><b style="font-size: 2.5rem;" class="m-0">
                 <span class="font" style="color: red;">Fr</span>
@@ -279,7 +279,7 @@ $(document).ready(function(){
                 </button>
               </form>
             </div>
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-3 overflow-hidden">
               <span>VĂN PHÒNG ĐIỀU HÀNH</span> <br />
               <span>Công ty Cổ Phần Color Life</span> <br />
       
