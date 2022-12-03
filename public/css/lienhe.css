@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:link,
+a:focus,
+a:visited{
+    text-decoration: none;
+    border: none;
+}
+a{
+    color: #555;
+}
+body{
+    background-color: #fff;
+    font-size: 13px;
+    min-width: 1050px;
+}
+
+/* Header start */
+
+#header{
+    width: 100%;
+    display: block;
+    clear: both;
+    position: relative;
+    float: left;
+}
+.fixed{
+    position: fixed !important;
+    z-index: 10000;
+    background-color: #fff;
+    margin-top: 0 !important;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px #0000001a!important;
+}
+#header .logo img{
+    float: left;
+    width: 285px;
+    padding-right: 40px;
+    margin-top: 6px;
+}
+#header .search{
+    float:left;
+    width: calc(100% - 285px - 180px);
+    position: relative;
+    padding-right: 40px;
+}
+#header  .search input[type=text]{
+    outline: none;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    float: left;
+    border: 1px solid #eee;
+    width: calc(100% - 87px);
+    border-radius: 3px 0 0 3px;
+    margin-top: 6px;
+}
+#header .search a.btnsearch{
+    border: 1px solid #eee;
+    margin-left: -1px;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 0 3px 3px 0;
+    float: left;
+    font-weight: 600;
+    margin-top: 6px;
+}
+.support strong{
+    text-transform: uppercase;
+}
+.support strong,
+.support span{
+    display: block;
+}
+strong{
+    font-weight: bold;
+}
+.support{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+.cart a,
+.account a{
+    display: block;
+    font-weight: 600;
+}
+.cart a:hover{
+    color: #bd2026;
+}
+.account a:hover{
+    color:#bd2026;
+}
+.cart,
+.account{
+    text-align: center;
+}
+.cart,
+.account{
+    width: 90px;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+}
+.account img,
+.cart img{
+    max-width: 32px;
+    clear: both;
+    text-align: center;
+    cursor: pointer;
+}
+.account img{
+    border-radius: 50%;
+}
+.cart strong{
+    display: block;
+}
+.signin_dropdown {
+    width: 240px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 999;
+    position: absolute;
+    box-shadow: none;
+    background-color: #fff;
+    display: none;
+    right: 0;
+}
+.signin_dropdown .sign-in {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.signin_dropdown .sign-in,
+.signin_dropdown .login-fb,
+.signin_dropdown .login-gg {
+    display: block;
+    padding: 8px;
+    border: 1px solid #ff9800;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: #ff9800;
+    color: #fff;
+}
+.dac {
+    margin-bottom: 10px;
+}
+.dac strong {
+    padding: 0;
+    font-size: 15px;
+    display: block;
+}
+.dac a {
+    display: block;
+    font-size: 15px;
+    color: #bd2026;
+    font-weight: 600;
+}
+.signin_dropdown .login-fb {
+    background: #3b5998 url(../images/footer/icon-fb.png) no-repeat 6px 5px;
+    border: 1px solid #3b5998;
+}
+.signin_dropdown .login-gg {
+    /* background: #fff url(../images/header/tải\ xuống\ \(1\).png) no-repeat 6px 5px; */
+    border: 1px solid #dedede;
+    color: #333;
+}
+.npf {
+    width: 100%;
+    border: 2px solid #9a9a9a;
+    border-radius: 5px;
+    padding: 5px;
+}
+.npf strong {
+    font-size: 15px;
+}
+.npf ul {
+    padding: 0 0 0 20px;
+    text-align: left;
+}
+/* Header end */
+
+/* Navbar start */
+
+#top_menu {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    clear: both;
+    margin-top: 106px;
+    background: #f3a9c3;    
+    box-shadow: 0 2px 5px #0000001a;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1140px;
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+.header_nav{
+    display: inline-block;
+}
+
+.header_nav , .subnav{
+    list-style-type: none;
+}
+
+.header_nav > li {
+    display: inline-block;
+}
+
+.header_nav li {
+    position: relative;
+}
+
+.header_nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header_nav li a{
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 24px;
+    display: block;
+}
+
+.header_nav li:hover .subnav{
+    display: block;
+}
+
+.header_nav > li:hover > a{
+    color:#bd2026;
+}
+
+.header_nav .subnav{
+    display: none;
+    width: 250px;
+    padding: 4px 0;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 13px -3px grey;
+    border: 1px solid #f5f5f5;
+    transition: opacity .10s ease,max-height .10s step-end,max-width .10s step-end,padding .10s step-end;
+}
+
+.header_nav .subnav a{
+    color: #555;
+    padding: 0 16px;
+    line-height: 20px;
+}
+
+.header_nav .subnav li:hover{
+    color: #bd2026;
+    background-color: #ccc;
+}
+
+/* Navbar end */
+
+/* Form Lien He Start */
+
+.form-Lien-He{
+    border-radius: 20px;
+    background-color: #f7f7f7;
+}
+
+.required{
+    font-size: 20px;
+    color: red;
+    vertical-align: -3px;
+}
+
+/* Form Lien He End */
+
+/* Tien ich dich vu Start*/
+
+.tien-ich-headline {
+    color: #363636;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.tien-ich-headline::before {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 3px;
+    background: #f3a9c3;
+    content: '';
+}
+
+.tien-ich .col-3 {
+    display: block;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    border-radius: 50px;
+    position: relative;
+    padding: 10px 15px 10px 5px;
+}
+
+.tien-ich .col-3 .service-img {
+    /* float: left; */
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 68px;
+    padding: 0px 10px;
+}
+
+.tien-ich .col-3 .service-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 5px;
+}
+
+.tien-ich .col-3 .service-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0;
+}
+
+.tien-ich .col-3 .service-detail {
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Tien ich dich vu End*/
+
+/* Footer Start */
+
+.Footer {
+    background-color: #ECECEC;
+}
+
+.Footer ul li {
+    list-style-type: circle;
+}
+
+.Footer a {
+    color: #D62828;
+    font-weight: 500;
+}
+
+.Footer form {
+    padding-top: 10px;
+}
+
+.Footer form button {
+    width: 50px;
+    background-color: #D62828;
+    color: #ffe4dc;
+    border-color: #D62828;
+}
+
+.Footer span {
+    color: #D62828;
+    font-weight: 500;
+}
+
+.Footer-mail-button{
+    vertical-align: -1px;
+}
+
+.ti-email{
+    font-size: 16px;
+}
+
+/* Footer End */

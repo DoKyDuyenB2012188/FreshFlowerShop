@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../public/css/lienhe.css"> -->
+    <link rel="stylesheet" href="../headerAndFooter/hf.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main class="container">
+        <div class="row mt-4">
+            <div class="col-6 pt-4 form-Lien-He card">
+              <form>
+                <div class="form-group row pb-1">
+                  <label for="frm_Email" class="col-sm-3 col-form-label"><span class="required">*</span> Email:</label>
+                  <div class="col-sm-9 ">
+                    <input type="email" class="form-control" id="frm_Email" placeholder="nguyenvana123@gmail.com">
+                  </div>
+                </div>
+                <div class="form-group row pb-3">
+                  <label for="frm_TieuDe" class="col-sm-3 col-form-label"><span class="required">*</span> Tiêu đề:</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="frm_TieuDe">
+                  </div>
+                </div>
+                <fieldset class="form-group row pb-3">
+                  <legend class="col-form-label col-sm-3 float-sm-left pt-0"><span class="required">*</span> Bạn là:</legend>
+                  <div class="col-sm-9">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="frm_YKien" id="frm_YKien1" value="">
+                      <label class="form-check-label" for="frm_YKien1">Khách hàng mới</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="frm_YKien" id="frm_YKien2" value="">
+                      <label class="form-check-label" for="frm_YKien2">Khách hàng lâu năm</label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="form-group">
+                  <label for="frm_NoiDung"><span class="required">*</span> Nội dung liên hệ:</label>
+                  <textarea class="form-control" id="frm_NoiDung" rows="3"></textarea>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <button type="submit" onclick="send()" class="btn btn-primary">Gửi đi <i data-feather="send"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-6 Dia-Chi">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7235485722294!2d105.78061631523369!3d10.039656175103817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a768a8090b%3A0x4756d383949cafbb!2zMTMwIFjDtCBWaeG6v3QgTmdo4buHIFTEqW5oLCBBbiBI4buZaSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1556697525436!5m2!1svi!2s"
+                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+    <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="../public/javascript/lienhe.js"></script>
+    <script src="../headerAndFooter/hf.js"></script>
+</body>
+</html>

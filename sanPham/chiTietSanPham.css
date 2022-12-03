@@ -1,12 +1,5 @@
-@font-face {
-    font-family: Asap;
-    src: url(../public/font/Asap-VariableFont_wght.ttf);
-}
 
-* {
-    box-sizing: border-box;
-    font-family: ArchivoNarrow;
-}
+@import "./sanPham.css";
 
 .hm-property {
     margin-top: 10px;
@@ -69,4 +62,10 @@
     .get_btn3 {
         width: 100%;
     }
+}
+#image_item{
+    margin-top: 5%;
+}
+.content_nav_top_next{
+    width: 380px !important;
 }

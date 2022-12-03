@@ -1,5 +1,17 @@
+let filter_list = [];
+let price = "";
+let current = 32;
+let lenght_products = 0;
+let sort_Price = "";
 window.onload = () => {
     responsive();
+    const choice = window.localStorage.getItem('choice');
+    if(choice){
+        $(`#${choice}`).prop('checked', true);
+        ChangeState("", choice);
+        window.localStorage.removeItem('choice');
+        render_items(current);
+    }
 };
 window.addEventListener('resize', function(){
     responsive();
@@ -42,14 +54,10 @@ function toggler_menu(){
     CloseNav();
   }
 }
-let filter_list = [];
-let price = "";
-let current = 32;
-let lenght_products = 0;
-let sort_Price = "";
+
 function render_items(index){
     const product = new Product();
-    console.log(sort_Price);
+    // console.log(sort_Price);
     let cardList = product.filterProduct(filter_list);
     if(price != ""){
         let min = price.split('-')[0];

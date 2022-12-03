@@ -108,8 +108,8 @@ class Product {
     let set = new Set(result);
     return Array.from(set);
   }
-  findOne(id){
-    return this.data.filter((item) => item.id == id);
+  async findOne(id){
+    return await this.data.filter((item) => item.id == id)[0];
   }
   sortMinToMax(cardList){
     return cardList.sort((a,b) => {
@@ -153,5 +153,41 @@ class Product {
   updateProduct(id, item) {
     this.deleteProduct(id);
     this.addProduct(item);
+  }
+  findById(id){
+    return this.data.filter((el)=> el.id == id)[0];
+  }
+  findProductByText(text){
+    let result = [];
+     this.data.forEach((el) => {
+      el.occasion.forEach((oc)=> {
+        if(oc.includes(text)){
+          result.push(el);
+        }
+      })
+    })
+    this.data.forEach((el) => {
+      el.object.forEach((oc)=> {
+        if(oc.includes(text)){
+          result.push(el);
+        }
+      })
+    })
+    this.data.forEach((el) => {
+      el.style.forEach((oc)=> {
+        if(oc.includes(text)){
+          result.push(el);
+        }
+      })
+    })
+    this.data.forEach((el) => {
+      el.color.forEach((oc)=> {
+        if(oc.includes(text)){
+          result.push(el);
+        }
+      })
+    })
+    let set = new Set(result);
+    return Array.from(set);
   }
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../headerAndFooter/hf.css">
+    <link rel="stylesheet" href="../trangChu/trangChu.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container mt-4">
+            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+    
+            <h1 class="text-center">Giỏ hàng</h1>
+            <div class="row mt-4">
+                <div class="col col-md-12">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Ảnh đại diện</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="datarow">
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Tổng Tiền</th>
+                                <td id="total" colspan="6">0 đ</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="button-area">
+                        <a href="../trangChu/trangChu.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                                aria-hidden="true"></i>&nbsp;Quay
+                            về trang chủ <ion-icon class="home-outline" name="home-outline"></ion-icon></a>
+                        <a href="" onclick="Thanh_Toan()" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart"
+                                aria-hidden="true"></i>&nbsp;Thanh toán <div class="ti-money"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+    <script src="../headerAndFooter/hf.js"></script>
+    <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="../shared/products.js"></script>
+    <script src="../model/product.js"></script>
+    <script src="./gioHang.js"></script>
+</body>
+</html>

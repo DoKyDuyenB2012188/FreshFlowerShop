@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./sanPham.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main class="container">
+        <div class="model_dark"></div>
+        <div class="content_top">
+            <div class="ft_content overflow-auto d-inline-block">
+                <div class="content_nav_top">
+                    <div class="filter-item d-inline-block">
+                        <a class="item_nav_top filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
+                    </div>
+                    <div class="d-inline-block">
+                      <a class="item_nav_top active " href="#">Trang chủ</a>
+                      <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                    </div>
+                    <div class="d-inline-block">
+                      <a class="item_nav_top " href="#">Hoa sinh nhật</a>
+                      <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                    </div>
+                    <div class="d-inline-block">
+                      <a class="item_nav_top " href="#">Hoa tặng người yêu</a>
+                      <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wapper">
+            <div id="content-items d-flex justify-content-center" class="col-sm-12">
+                <div class="col-12 col-sm-12 text-center" id="nothing" style="opacity: 0.4;">
+                </div>
+                <div id="data_items" class="row data_items">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+    <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="../headerAndFooter/hf.js"></script>
+    <script src="../shared/products.js"></script>
+    <script src="../model/product.js"></script>
+    <script src="./timSanPham.js"></script>
+</body>
+</html>

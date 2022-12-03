@@ -1,0 +1,198 @@
+@font-face {
+  font-family: yessy;
+  src: url(../public/font/Yessy\ Font\ by\ Situjuh\ \(7NTypes\).otf);
+}
+@font-face {
+  font-family: Asap;
+  src: url(../public/font/Asap-VariableFont_wght.ttf);
+}
+*{
+  box-sizing: border-box;
+  font-family: ArchivoNarrow;
+}
+.font{
+  font-family: yessy;
+}
+a:link,
+a:focus,
+a:visited {
+  text-decoration: none;
+  border: none;
+}
+#header {
+  margin: 0 5%;
+  background-color: rgb(255, 209, 215);  
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.search {
+  position: relative;
+  /* box-shadow: 0 0 40px rgba(51, 51, 51, .1); */
+}
+.search input {
+  height: 32.8px;
+  /* text-indent: 25px; */
+  border: 1px solid #d6d4d4;
+}
+.search button {
+  border-radius: 0 5px 5px 0;
+  border-color: #e9d8d8;
+}
+
+.search button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 98%;
+  width: 20%;
+  /* background: white; */
+  color: #000;
+  padding: 0;
+}
+.search p {
+  font-size: 90%;
+  margin: 0;
+  font-weight: 400;
+}
+.support{
+    width: 33.33%;
+    text-align: center;
+}
+.support strong{
+    text-transform: uppercase;
+}
+.cart a:hover,  
+.account a:hover {
+  color: #bd2026;
+}
+.account img,
+.cart img {
+  max-width: 100%;
+  /* clear: both; */
+  text-align: center;
+  cursor: pointer;
+}
+.account img {
+  border-radius: 50%;
+}
+.signin_dropdown {
+  width: 240px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 999;
+  position: absolute;
+  box-shadow: none;
+  background-color: #fff;
+  display: none;
+    right: 6%;
+  text-align: center;
+}
+.account:hover > .signin_dropdown {
+  display: block;
+}
+.signin_dropdown .sign-in {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.signin_dropdown .sign-in,
+.signin_dropdown .login-fb,
+.signin_dropdown .login-gg {
+  display: block;
+  padding: 8px;
+  border: 1px solid #ff9800;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background: #ff9800;
+  color: #fff;
+}
+.dac {
+  margin-bottom: 10px;
+}
+.dac strong {
+  padding: 0;
+  font-size: 15px;
+  display: block;
+}
+.dac a {
+  display: block;
+  font-size: 15px;
+  color: #bd2026;
+  font-weight: 600;
+}
+.signin_dropdown .login-fb {
+  background: #3b5998 url(../images/footer/icon-fb.png) no-repeat 6px 5px;
+  border: 1px solid #3b5998;
+}
+.signin_dropdown .login-gg {
+  /* background: #fff url(../images/header/tải\ xuống\ \(1\).png) no-repeat 6px 5px; */
+  border: 1px solid #dedede;
+  color: #333;
+}
+.npf {
+  width: 100%;
+  border: 2px solid #9a9a9a;
+  border-radius: 5px;
+  padding: 5px;
+}
+.npf strong {
+  font-size: 15px;
+}
+.npf ul {
+  padding: 0 0 0 20px;
+  text-align: left;
+}
+
+.Footer {
+  background-image: url(https://hoayeuthuong.com/images/bg-special.png);
+    background-repeat: repeat;
+    background-position: left top;
+    padding: 20px 0 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.Footer ul li {
+  list-style-type: circle;
+}
+
+.Footer a {
+  color: #d62828;
+  font-weight: 500;
+}
+
+.Footer form {
+  padding-top: 10px;
+}
+
+.Footer form button {
+  width: 50px;
+  background-color: #d62828;
+  color: #ffe4dc;
+  border-color: #d62828;
+}
+.Footer form button:hover{
+  background-color: #ff9800;
+  border-color:#ff9800;
+}
+
+.Footer span {
+  color: #d62828;
+  font-weight: 500;
+}
+
+.Footer-mail-button {
+  vertical-align: -1px;
+}
+/* Header end */
+
+/* Navbar start */
+
+/* Navbar end */
+
+/* .mau-hoa-hot-card {} */
+#btn-back-to-top{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}

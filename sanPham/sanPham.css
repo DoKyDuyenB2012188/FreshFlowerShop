@@ -1,6 +1,6 @@
 
 /* CSS */
-@font-face {
+/* @font-face {
   font-family: yessy;
   src: url(../public/font/Yessy\ Font\ by\ Situjuh\ \(7NTypes\).otf);
 }
@@ -14,7 +14,7 @@
 }
 .font{
   font-family: yessy;
-}
+} */
 .intro{
   margin-top: 10%;
   opacity: 0.4;

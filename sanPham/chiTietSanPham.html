@@ -15,22 +15,22 @@
     <main class="container">
         <div class="row">
             <div class="content_nav_top">
-                <div class="filter-item d-inline-block">
-                    <a class="item_nav_top filter_items d-none" onclick="toggler_menu();" href="#"><i class="fas fa-filter"></i>Filter</a>
+                <div class="ft_content overflow-auto d-inline-block">
+                    <div class="content_nav_top_next">
+                        <div class="d-inline-block">
+                          <a class="item_nav_top active " href="#">Trang chủ</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                        <div class="d-inline-block">
+                          <a class="item_nav_top " href="#">Hoa sinh nhật</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                        <div class="d-inline-block">
+                          <a class="item_nav_top " href="#">Hoa tặng người yêu</a>
+                          <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-inline-block">
-                  <a class="item_nav_top active " href="../trangChu/trangChu.html">Trang chủ</a>
-                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
-                </div>
-                <div class="d-inline-block">
-                  <a class="item_nav_top " href="./sanPham.html">Sản phẩm</a>
-                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
-                </div>
-                <div class="d-inline-block">
-                  <a class="item_nav_top " href="#">Hoa tặng người yêu</a>
-                  <img width="25px" src="https://img.icons8.com/color-glass/48/null/orchid.png"/>
-                </div>
-            </div>
         </div>
         <div class="row">
             <div class="image_content col-12 col-sm-4 text-center">
@@ -61,7 +61,7 @@
                     </fieldset>
                </div>
                <div class="get row">
-                    <button type="button" class=" col-6 col-sm-3 get_btn1 btn btn-outline-warning btn-rounded" data-mdb-ripple-color="dark">Thêm vào giỏ hàng</button>
+                    <button onclick="toCart()" type="button" class=" col-6 col-sm-3 get_btn1 btn btn-outline-warning btn-rounded" data-mdb-ripple-color="dark">Thêm vào giỏ hàng</button>
                     <button type="button" class=" col-6 col-sm-3 get_btn2 btn btn-danger btn-rounded">Mua Ngay</button>
                     <button type="button" class=" col-12 col-sm-6 get_btn3 btn btn-outline-success btn-rounded d-block mt-0" data-mdb-ripple-color="dark">Gọi ngay</button>
                </div>
@@ -85,6 +85,8 @@
     </main>
     <footer></footer>
     <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+    <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="../headerAndFooter/hf.js"></script>
     <script src="../shared/products.js"></script>
     <script src="../model/product.js"></script>
     <script src="./chiTietSanPham.js"></script>
