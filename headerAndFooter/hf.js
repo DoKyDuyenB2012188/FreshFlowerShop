@@ -10,7 +10,7 @@ $(document).ready(function(){
     </div>
     <div class="row d-flex justify-content-around">
         <div class="logo col-6 col-md-3 d-flex text-center flex-column justify-content-center align-items-center" >
-            <a style="width: 300px;" href="../trangChu/trangChu.html"><b style="font-size: 2.5rem;" class="m-0">
+            <a style="width: 300px;" href="../index.html"><b style="font-size: 2.5rem;" class="m-0">
                 <span class="font" style="color: red;">Fr</span>
                 
                 <span class="font" style="color: orange;">e</span>
