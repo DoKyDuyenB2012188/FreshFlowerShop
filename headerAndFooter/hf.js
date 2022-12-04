@@ -87,7 +87,7 @@ $(document).ready(function(){
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="font_w nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   CHỦ ĐỀ
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -102,7 +102,7 @@ $(document).ready(function(){
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="font_w nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     ĐỐI TƯỢNG
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -119,7 +119,7 @@ $(document).ready(function(){
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="font_w nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     KIỂU DÁNG
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -133,7 +133,7 @@ $(document).ready(function(){
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="font_w nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     MÀU SẮC
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

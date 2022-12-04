@@ -39,3 +39,8 @@ function toCart(){
     document.getElementById('num').textContent = '('+cart.length+')';
    }
 }
+
+function buyToCart(){
+    toCart();
+    window.location.href = '../gioHang/gioHang.html';
+}
