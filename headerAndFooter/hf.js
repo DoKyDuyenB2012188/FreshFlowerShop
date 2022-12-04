@@ -1,5 +1,6 @@
 $(document).ready(function(){
     addfile();
+    updateCart();
 });
   
   function addfile(){
@@ -46,9 +47,7 @@ $(document).ready(function(){
             <div class="cart">
               <div id="shopping-cart" class="text-center" style="width: 90px; height:55px;">
                 <img src="../public/image/shopping-bag.png" alt="" >
-                <a class="mt-1" style="display: block;" href="../gioHang/gioHang.html" title="Giỏ hàng"><strong style="color: rgb(196, 60, 65);">Giỏ hàng${
-                 window.localStorage.getItem('cart') == undefined ? "" : JSON.parse(window.localStorage.getItem('cart')).length == 0 ? "": '('+ JSON.parse(window.localStorage.getItem('cart')).length + ')'
-                }</strong></a>
+                <a class="mt-1" style="display: block;" href="../gioHang/gioHang.html" title="Giỏ hàng"><strong style="color: rgb(196, 60, 65);">Giỏ hàng<span id="num"></span></strong></a>
               </div>
             </div>
       
@@ -156,84 +155,6 @@ $(document).ready(function(){
     `);
     $("footer").html(`
     <div class="container-fluid">
-    <div class="row tien-ich mt-5 text-center">
-        <p class="col-12 text-center tien-ich-headline" style="color: rgb(196, 60, 65);">
-            <b>TẠI SAO BẠN NÊN DÙNG DỊCH VỤ CỦA CHÚNG TÔI?</b>
-        </p>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-free-ship.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">MIỄN PHÍ GIAO HÀNG 63 TỈNH</div>
-                <div class="service-detail">Free ship (nội thành)</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-support-247.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">PHỤC VỤ 24/24</div>
-                <div class="service-detail">24/7 service</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-vat.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">GIÁ ĐÃ GỒM 10% VAT</div>
-                <div class="service-detail">Price include VAT</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-quick-delivery.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">GIAO NHANH TRONG 60 PHÚT</div>
-                <div class="service-detail">60 minutues quick delivery</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-guarantee-smile.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">CAM KẾT HÀI LÒNG 100%</div>
-                <div class="service-detail">100% guarantee smile</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-        <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-            <img src="../public/image/tienich/icon-fresh-warranty.png" class="service-img" alt="">
-            <div class="service-text">
-                <div class="service-title">CAM KẾT HOA TƯƠI 3+ ngày</div>
-                <div class="service-detail">3+ days Fresh warranty</div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-sm-3">
-            <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-                <img src="../public/image/tienich/icon-guarantee-smile.png" class="service-img" alt="">
-                <div class="service-text">
-                <div class="service-title">TẶNG THIỆP CAO CẤP</div>
-                <div class="service-detail">Free greeting card</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-sm-3">
-            <div style="background-color: rgb(248, 248, 248); border-radius:50px; padding:10px; margin-top:10px; height: 90%">
-                <img src="../public/image/tienich/icon-discount.png" class="service-img" alt="">
-                <div class="service-text">
-                  <div class="service-title">GIẢM GIÁ ĐẾN 10%</div>
-                  <div class="service-detail">Receive 3-10% discount</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <!-- footer -->
     <div class="container-fluid ">
         <div class="row Footer pt-3 mt-4 pl-0 pr-0 pl-sm-5 pr-sm-5">
@@ -342,4 +263,12 @@ function handleKeyPress(event){
     if(event.keyCode == 13){
         search();
     }
+}
+
+function updateCart(){
+    let cart = window.localStorage.getItem('cart');
+   if(cart){
+    cart = JSON.parse(cart);
+    document.getElementById('num').textContent = '('+cart.length+')';
+   }
 }

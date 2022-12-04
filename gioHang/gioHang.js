@@ -39,7 +39,7 @@ function showCart() {
             <button onclick="plus('${
               cart[i].id
             }');" style="border: none;"><i class="fas fa-plus"></i></button>
-            <p id="" style="display: inline; margin: 0px 10px;">${sp[i].num}</p>
+            <p id="num_${cart[i].id}" style="display: inline; margin: 0px 10px;">${sp[i].num}</p>
             <button onclick="sub('${
               cart[i].id
             }')" style="border: none;"><i class="fas fa-minus"></i></button>
@@ -67,14 +67,16 @@ function showCart() {
 
 function plus(id){
     let cart = window.localStorage.getItem('cart');
+    let check = 0;
     cart = JSON.parse(cart);
     cart.forEach((el)=>{
         if(el.id == id){
             el.num = Number(el.num) + 1;
+            check = el.num;
         }
     })
     window.localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.reload();
+    document.getElementById(`num_${id}`).textContent = check;
 }
 
 function deleteCart(id){
@@ -83,7 +85,8 @@ function deleteCart(id){
      cart = JSON.parse(cart);
      cart = cart.filter((el)=> el.id != id);
      window.localStorage.setItem('cart', JSON.stringify(cart));
-     window.location.reload();
+     showCart();
+     totalPrice();
     }
  }
 
@@ -101,7 +104,7 @@ function sub(id){
        return deleteCart(id);
     }
     window.localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.reload();
+    document.getElementById(`num_${id}`).textContent = check;
 }
 function totalPrice(){
     const price = document.getElementsByClassName('thanhtien');
@@ -113,5 +116,9 @@ function totalPrice(){
 }
 
 function Thanh_Toan(){
-    window.localStorage.removeItem('cart');
+    let sp = window.localStorage.getItem('cart');
+    if(sp){
+        alert('Xác nhận đơn hàng '+ sp);
+        window.localStorage.removeItem('cart');
+    }
 }

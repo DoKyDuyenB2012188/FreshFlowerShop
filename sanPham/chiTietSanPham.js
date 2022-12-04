@@ -33,9 +33,9 @@ function toCart(){
         alert("Sản phẩm đã có trong giỏ hàng")
     }
     window.localStorage.setItem('cart',JSON.stringify(cart));
-    window.location.reload();
+    document.getElementById('num').textContent = '('+cart.length+')';
    }else{
     window.localStorage.setItem('cart',JSON.stringify([{"id": storeId, "num": 1}]));
-    window.location.reload();
+    document.getElementById('num').textContent = '('+cart.length+')';
    }
 }
