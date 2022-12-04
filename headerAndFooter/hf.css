@@ -21,7 +21,7 @@ a:visited {
 }
 #header {
   margin: 0 5%;
-  background-color: rgb(255, 209, 215);  
+  /* background-color: rgb(255, 209, 215);   */
   margin-left: 0px;
   margin-right: 0px;
 }
