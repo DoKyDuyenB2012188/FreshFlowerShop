@@ -269,6 +269,11 @@ function updateCart(){
     let cart = window.localStorage.getItem('cart');
    if(cart){
     cart = JSON.parse(cart);
-    document.getElementById('num').textContent = '('+cart.length+')';
+    if(cart.length == 0){
+        document.getElementById('num').textContent = "";
+    }
+    else{
+        document.getElementById('num').textContent = '('+cart.length+')';
+    }
    }
 }
