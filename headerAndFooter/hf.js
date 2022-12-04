@@ -46,15 +46,13 @@ $(document).ready(function(){
           <div class="d-flex justify-content-center align-items-center">
             <div class="cart">
               <div id="shopping-cart" class="text-center" style="width: 90px; height:55px;">
-                <img src="../public/image/shopping-bag.png" alt="" >
-                <a class="mt-1" style="display: block;" href="../gioHang/gioHang.html" title="Giỏ hàng"><strong style="color: rgb(196, 60, 65);">Giỏ hàng<span id="num"></span></strong></a>
+                <a class="mt-1" style="display: block;" href="../gioHang/gioHang.html" title="Giỏ hàng"><img src="../public/image/shopping-bag.png" alt="" ><strong style="color: rgb(196, 60, 65); display: block;">Giỏ hàng<span id="num"></span></strong></a>
               </div>
             </div>
       
             <div id="myaccount" class="account">
               <div class="text-center" style="width: 90px; height:55px;">
-                <img src="../public/image/user.png"  alt="">
-                <a class="mt-1" style="display: block;" href="" title="Tài khoản"><strong style="color: rgb(196, 60, 65);">Tài khoản</strong></a>
+                <a class="mt-1" style="display: block;" href="" title="Tài khoản"><img src="../public/image/user.png"  alt=""><strong style="color: rgb(196, 60, 65); display: block;">Tài khoản</strong></a>
               </div>
                 <div id="signin" class="signin_dropdown">
                   <a href="../dangKy&dangNhap/loginandregister.html" title="Sign in" class="sign-in">Sign in</a>
