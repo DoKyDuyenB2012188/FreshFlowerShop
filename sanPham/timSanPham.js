@@ -25,6 +25,7 @@ function convert_vi_to_en(str) {
 function find(){
     let search = window.localStorage.getItem('search');
     search = convert_vi_to_en(search);
+    search = search.toLowerCase();
     const product = new Product();
     let cardList = product.findProductByText(search);
     console.log(cardList.length)
