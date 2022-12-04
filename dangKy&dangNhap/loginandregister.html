@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mieu ta -->
+    <meta name="description"
+      content="Shop yêu thương shopyeuthuong.com chuyên cung cấp dịch vụ điện hoa online và hoa tươi trên 63 tỉnh thành. Giao hoa miễn phí, shop hoa tươi được yêu thích nhất Việt Nam">
+    <!-- Keyword -->
+    <meta name="keywords" content="hoa yeu thuong, hoa tuoi, hoa gia re, hoa sale, hoa giao nhanh, shop hoa, hoa online">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../headerAndFooter/hf.css">
+    <link rel="stylesheet" href="../public/css/loginandregister.css">
+
+    <script src="https://kit.fontawesome.com/d8d54d0f42.js" crossorigin="anonymous"></script>
+
+    <title>Tài khoản</title>
+</head>
+<body>
+  <header></header>
+  <!-- login and register -->
+<div class="container-fluid">
+    <div class="row mt-2 ml-5">
+        <div class="contentwrapper col-sm-6 d-flex justify-content-center">
+            <div class="groupbox">
+                <div class="title">Chưa có tài khoản</div>
+                <div class="dropdown-divider"></div>
+                <p style="margin: 0 1%;">Khi tạo tài khoản tại cửa hàng chúng tôi, đơn hàng của bạn sẽ được xử lý nhanh hơn, bạn sẽ có thể lưu lại các địa chỉ giao hàng, xem và theo dõi các đơn hàng trong tài khoản.</p>
+                <div class="dropdown-divider"></div>
+                <form name="regfr">
+                    <table style="margin: 0 1%;">
+                        <tr>
+                            <th><span class="required">*</span> Email của bạn: </th>
+                            <td><input type="email" class="form-control" id="frm_Email" aria-describedby="emailHelp"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Mật khẩu: </th>
+                            <td><input type="password" class="form-control" id="frm_MatKhau"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Tên: </th>
+                            <td><input type="text" class="form-control" id="frm_Ten" placeholder="A"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Họ: </th>
+                            <td><input type="text" class="form-control" id="frm_Ho" placeholder="Nguyễn Văn"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Điện thoại: </th>
+                            <td><input type="text" class="form-control" id="frm_DienThoai"
+                                placeholder="0994584xxx"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Địa chỉ: </th>
+                            <td><input type="text" class="form-control" id="frm_DiaChi" placeholder="1234 Trần Hưng Đạo ..."></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" onclick="send()" class="btn btn-success mr-5">Tạo tài khoản mới<div class="ti-user"></div></button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="maincontent col-sm-6 d-flex justify-content-center">
+            <div class="groupbox">
+                <div class="title">Đã có tài khoản</div>
+                <div class="dropdown-divider"></div>
+                <p style="margin: 0 1%;">Nếu bạn đã có tài khoản tại trang web Hoayeuthuong.com, xin hãy đăng nhập.</p>
+                <div class="dropdown-divider"></div>
+                <form name="login">
+                    <table style="margin: 0 1%;">
+                        <tr>
+                            <th>Đăng nhập từ: <a href="">Google</a></th>
+                        </tr>
+                        <br>
+                            <th><span class="required">*</span> Email của bạn: </th>
+                            <td><input type="email" class="form-control" id="frm_Email" aria-describedby="emailHelp"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span> Mật khẩu: </th>
+                            <td><input type="password" class="form-control" id="frm_MatKhau"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Quên mật khẩu?</a></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" onclick="send()" class="btn btn-success mr-5">Đăng nhập<div class="ti-user"></div></button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- footer -->
+  <footer></footer>
+  <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
+  <script src="../headerAndFooter/hf.js"></script>
+  <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="../public/javascript/loginandregister.js"></script>
+</body>
+</html>

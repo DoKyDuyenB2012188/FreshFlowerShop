@@ -57,7 +57,7 @@ $(document).ready(function(){
                 <a class="mt-1" style="display: block;" href="" title="Tài khoản"><strong style="color: rgb(196, 60, 65);">Tài khoản</strong></a>
               </div>
                 <div id="signin" class="signin_dropdown">
-                  <a href="../dangKy&dangNhap/dangNhapAnDangKy.html" title="Sign in" class="sign-in">Sign in</a>
+                  <a href="../dangKy&dangNhap/loginandregister.html" title="Sign in" class="sign-in">Sign in</a>
                   <div class="dac">
                     <strong>Bạn chưa có tài khoản</strong>
                     <a href="dangky.html" title="Nhấn vào đây" c lass="register">Nhấn vào đây</a>

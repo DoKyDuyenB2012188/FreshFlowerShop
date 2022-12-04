@@ -3,7 +3,7 @@ window.onload = () => {
   totalPrice();
 };
 function changePrice(price) {
-  ////2.000.000 
+  ////2.000.000
   let result = "";
   let tem = price.split(" ")[0];
   tem = tem.split(".");
@@ -35,20 +35,22 @@ function showCart() {
     </td>
     <td id="product-name${i + 1}">${cart[i].nameCard}</td>
     <td id="so-luong${i + 1}" class=" text-right">
-        <div>
-            <button onclick="plus('${
+        <div class="d-flex justify-content-center">
+            <button id="plus" onclick="plus('${
               cart[i].id
             }');" style="border: none;"><i class="fas fa-plus"></i></button>
-            <p id="num_${cart[i].id}" style="display: inline; margin: 0px 10px;">${sp[i].num}</p>
-            <button onclick="sub('${
+            <p class="text_num" id="num_${
+              cart[i].id
+            }" style="display: inline; margin: 0px 10px;">${sp[i].num}</p>
+            <button id="sub" onclick="sub('${
               cart[i].id
             }')" style="border: none;"><i class="fas fa-minus"></i></button>
         </div>
     </td>
     <td id="gia-tien${i + 1}" class=" text-right">${cart[i].newprice}</td>
-    <td id="thanh-tien${i+1}" class="thanhtien text-right">${
-      changePrice(cart[i].newprice) * Number(sp[i].num)
-    }</td>
+    <td id="thanh-tien${i + 1}" class="thanhtien text-right">${
+        changePrice(cart[i].newprice) * Number(sp[i].num)
+      }</td>
     <td>
         <a onclick="deleteCart('${
           cart[i].id
@@ -58,70 +60,69 @@ function showCart() {
     </td>
 </tr>    
     `;
-    result += component;
+      result += component;
     }
-    document.getElementById('datarow').innerHTML = "";
-    document.getElementById('datarow').innerHTML = result;
+    document.getElementById("datarow").innerHTML = "";
+    document.getElementById("datarow").innerHTML = result;
   }
 }
 
-function plus(id){
-    let cart = window.localStorage.getItem('cart');
-    let check = 0;
+function plus(id) {
+  let cart = window.localStorage.getItem("cart");
+  let check = 0;
+  cart = JSON.parse(cart);
+  cart.forEach((el) => {
+    if (el.id == id) {
+      el.num = Number(el.num) + 1;
+      check = el.num;
+    }
+  });
+  window.localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById(`num_${id}`).textContent = check;
+  updateCart();
+}
+
+function deleteCart(id) {
+  let cart = window.localStorage.getItem("cart");
+  if (cart) {
     cart = JSON.parse(cart);
-    cart.forEach((el)=>{
-        if(el.id == id){
-            el.num = Number(el.num) + 1;
-            check = el.num;
-        }
-    })
-    window.localStorage.setItem('cart', JSON.stringify(cart));
-    document.getElementById(`num_${id}`).textContent = check;
+    cart = cart.filter((el) => el.id != id);
+    window.localStorage.setItem("cart", JSON.stringify(cart));
+    showCart();
+    totalPrice();
     updateCart();
+  }
 }
 
-function deleteCart(id){
-    let cart = window.localStorage.getItem('cart');
-    if(cart){
-     cart = JSON.parse(cart);
-     cart = cart.filter((el)=> el.id != id);
-     window.localStorage.setItem('cart', JSON.stringify(cart));
-     showCart();
-     totalPrice();
-     updateCart();
+function sub(id) {
+  let check = 1;
+  let cart = window.localStorage.getItem("cart");
+  cart = JSON.parse(cart);
+  cart.forEach((el) => {
+    if (el.id == id) {
+      if (Number(el.num) > 1) {
+        el.num = Number(el.num) - 1;
+        check = el.num;
+      }
     }
- }
-
-function sub(id){
-    let check = 0;
-    let cart = window.localStorage.getItem('cart');
-    cart = JSON.parse(cart);
-    cart.forEach((el)=>{
-        if(el.id == id){
-            el.num = Number(el.num) - 1;
-            check = el.num;
-        }
-    })
-    if(check == 0){
-       return deleteCart(id);
-    }
-    window.localStorage.setItem('cart', JSON.stringify(cart));
-    document.getElementById(`num_${id}`).textContent = check;
-    updateCart();
+  });
+  window.localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById(`num_${id}`).textContent = check;
+  updateCart();
 }
-function totalPrice(){
-    const price = document.getElementsByClassName('thanhtien');
-    let total = 0;
-    for(let i=0; i< price.length;i++){
-        total += Number((price[i].textContent).trim());
-    }
-    document.getElementById('total').innerText = total;
+function totalPrice() {
+  const price = document.getElementsByClassName("thanhtien");
+  let total = 0;
+  for (let i = 0; i < price.length; i++) {
+    total += Number(price[i].textContent.trim());
+  }
+  document.getElementById("total").innerText = total;
 }
 
-function Thanh_Toan(){
-    let sp = window.localStorage.getItem('cart');
-    if(sp){
-        alert('Xác nhận đơn hàng '+ sp);
-        window.localStorage.removeItem('cart');
-    }
+function Thanh_Toan() {
+  let sp = window.localStorage.getItem("cart");
+  if (sp) {
+    alert("Xác nhận đơn hàng " + sp);
+    window.localStorage.removeItem("cart");
+  }
 }

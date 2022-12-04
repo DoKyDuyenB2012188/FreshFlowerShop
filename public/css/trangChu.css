@@ -16,6 +16,21 @@
         text-align: center;
     }
 }
+@media screen and (max-width: 991px) {
+    #plus{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    #sub{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .text_num{
+        display: block;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 1000px) {
     .container-dot {
         right: 4%;
