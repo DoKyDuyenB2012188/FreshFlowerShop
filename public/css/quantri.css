@@ -1,3 +1,6 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
   a:link,
   a:focus,
   a:visited {
@@ -131,75 +134,139 @@
   }
   /* Header end */
   
-  /* Webpath Start */
-.webpath{
-    margin-bottom: 20px;
+  /* Navbar start */
+  
+  /* Navbar end */
+  
+.contentwrapper{
+  position: relative;
+  width: 1000px;
+}
+.leftside{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  float: left;
+}
+.leftmenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+.leftmenu ul li{
+  text-shadow: 0 1px 0 #fff;
+  /* font-weight: bold; */
+  line-height: 24px;
+  padding-left: 4px;
+  cursor: pointer;
+}
+.leftmenu a{
+  text-decoration: none;
+  color: #000 ;
+}
+.groupbox{
+  border: 1px solid #999;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.groupbox .title{
+  background-color: #333;
+  height: 32px;
+  padding: 5px 10px;
+  margin-top: 0;
+  color: #fff;
+  /* font-size: 13pt; */
+  font-weight: bold;
+  /* text-shadow: 0 1px 0 #777;
+  box-shadow: 1px 1px 15px #999 inset; */
+}
+.maincontent{
+  position: relative;
+  top: 10px;
+  left: 200px;
+  width: 900px;
+  min-height: 520px;
+  float: right;
+}
+.groupbox button{
+  background-color: #000;
+  color: #fff;
+  float:right;
+  cursor: pointer;
+  margin: 2% 1% 2% 0;
+}
+  /* Gio hang Start */
+
+thead{
+    background-color: #777;
 }
 
-.webpath a{
-    color: #D62828;
+.trash-outline{
+    padding-left: 5px;
     font-size: 18px;
+    vertical-align: -2px;
     font-weight: 500;
-    padding-left: 10px;
-    white-space: nowrap;
+    display: inline-block;
 }
 
-.webpath a:visited{
-    text-decoration: none;
-    border: none;
-}
-
-/* Webpath End */
 
 
-  .groupbox{
-    border: 1px solid rgb(242, 234, 234);
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 2px 2px 5px #ccc;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    width: 90%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 10px;
-  }
-  .groupbox .title{
-    /* background-color: #333; */
-    height: 32px;
-    padding: 5px 10px;
-    margin-top: 0;
-    color: #000;
-    /* font-size: 13pt; */
-    font-weight: bold;
-    text-transform: uppercase;
-    /* text-shadow: 0 1px 0 #777;
-    box-shadow: 1px 1px 15px #999 inset; */
-  }
-  .groupbox p{
-    color: green;
-  }
-  table a{
-    color: #000;
-  }
-  table a:hover{
-    color: #bd2026;
-  }
-  .btn:hover{
-    color: #ff9800;
-    background-color: bisque;
-  }
-  table th{
-    font-size: 13px;
-    color: #888;
-    cursor: pointer;
-  }
-  .required{
-    font-size: 20px;
-    color: red;
-    vertical-align: -3px;
-}
-
+/* Gio hang End */
+  
   /* Footer Start */
+  
+  .Footer {
+    background-color: #ececec;
+    font-size: 14px;
+  }
+  .Footer ul li {
+    list-style-type: circle;
+  }
+  
+  .Footer a {
+    color: #d62828;
+    font-weight: 500;
+  }
+  
+  .Footer form {
+    padding-top: 10px;
+  }
+  
+  .Footer form button {
+    width: 50px;
+    background-color: #d62828;
+    color: #ffe4dc;
+    border-color: #d62828;
+  }
+  .Footer form button:hover{
+    background-color: #ff9800;
+    border-color:#ff9800;
+  }
+  
+  .Footer span {
+    color: #d62828;
+    font-weight: 500;
+  }
+  
+  .Footer-mail-button {
+    vertical-align: -1px;
+  }
+  
+  .ti-email {
+    font-size: 16px;
+  }
+  
   /* Footer End */
+  
   /* back top */
+  
+  #btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+  }
