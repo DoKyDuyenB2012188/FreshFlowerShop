@@ -33,10 +33,10 @@ function toCart(){
         alert("Sản phẩm đã có trong giỏ hàng")
     }
     window.localStorage.setItem('cart',JSON.stringify(cart));
-    document.getElementById('num').textContent = '('+cart.length+')';
+    updateCart();
    }else{
     window.localStorage.setItem('cart',JSON.stringify([{"id": storeId, "num": 1}]));
-    document.getElementById('num').textContent = '('+cart.length+')';
+    updateCart();
    }
 }
 
