@@ -26,7 +26,7 @@ $(document).ready(function(){
           <div style="width: 100%">
             <div class="search d-flex flex-column justify-content-center align-items-center">
               <!-- <i class="fa fa-search"></i> -->
-              <input onkeypress="handleKeyPress(event)" id="search_text" type="text" class="form-control" placeholder="Tìm sản phẩm">
+              <input onkeypress="handleKeyPress(event)" id="search_text" type="text" class="form-control" placeholder="màu sắc, chủ đề, kiểu dáng...">
               <button onClick="search();"  style="width:80px" class="btn "><p>Tìm kiếm</p></button>
             </div>
           </div>
