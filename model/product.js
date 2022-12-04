@@ -190,4 +190,7 @@ class Product {
     let set = new Set(result);
     return Array.from(set);
   }
+  getAll(){
+    return this.data
+  }
 }
