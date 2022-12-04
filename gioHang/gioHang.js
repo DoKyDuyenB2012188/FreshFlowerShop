@@ -77,6 +77,7 @@ function plus(id){
     })
     window.localStorage.setItem('cart', JSON.stringify(cart));
     document.getElementById(`num_${id}`).textContent = check;
+    updateCart();
 }
 
 function deleteCart(id){
@@ -87,6 +88,7 @@ function deleteCart(id){
      window.localStorage.setItem('cart', JSON.stringify(cart));
      showCart();
      totalPrice();
+     updateCart();
     }
  }
 
@@ -105,6 +107,7 @@ function sub(id){
     }
     window.localStorage.setItem('cart', JSON.stringify(cart));
     document.getElementById(`num_${id}`).textContent = check;
+    updateCart();
 }
 function totalPrice(){
     const price = document.getElementsByClassName('thanhtien');
