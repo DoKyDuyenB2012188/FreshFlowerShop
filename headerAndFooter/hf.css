@@ -83,13 +83,13 @@ a:visited {
   position: absolute;
   box-shadow: none;
   background-color: #fff;
-  display: none;
+  /* display: none; */
     right: 6%;
   text-align: center;
 }
-.account:hover > .signin_dropdown {
+/* .account:hover > .signin_dropdown {
   display: block;
-}
+} */
 .signin_dropdown .sign-in {
   font-size: 15px;
   font-weight: 600;

@@ -1,8 +1,19 @@
 $(document).ready(function(){
     addfile();
     updateCart();
+    // check login
+    if(window.localStorage.getItem('account') != undefined){
+      let account = JSON.parse((window.localStorage.getItem('account')))[0];
+      let login = account.login;
+      console.log(account.username);
+      if(login == true){
+        $('#myaccount').addClass('d-none');
+        $('#myaccount_out').removeClass('d-none');
+        $('#tk_out').text(account.username);
+      }
+    }
 });
-  
+
   function addfile(){
     $("header").html(`
     <div class="container-fluid p-0" id="header">
@@ -52,18 +63,17 @@ $(document).ready(function(){
       
             <div id="myaccount" class="account">
               <div class="text-center" style="width: 90px; height:55px;">
-                <a class="mt-1" style="display: block;" href="" title="Tài khoản"><img src="../public/image/user.png"  alt=""><strong style="color: rgb(196, 60, 65); display: block;">Tài khoản</strong></a>
+                <a onclick="open_account('signin')" id="a_account" class="mt-1" style="display: block;" href="#" title="Tài khoản"><img src="../public/image/user.png" id="img_account"  alt=""><strong id="tk" style="color: rgb(196, 60, 65); display: block;">Tài khoản</strong></a>
               </div>
-                <div id="signin" class="signin_dropdown">
+                <div id="signin" class="signin_dropdown d-none">
                   <a href="../dangKy&dangNhap/loginandregister.html" title="Sign in" class="sign-in">Sign in</a>
                   <div class="dac">
                     <strong>Bạn chưa có tài khoản</strong>
-                    <a href="dangky.html" title="Nhấn vào đây" c lass="register">Nhấn vào đây</a>
+                    <a href="../dangKy&dangNhap/loginandregister.html" title="Nhấn vào đây" c lass="register">Nhấn vào đây</a>
                   </div>
-                  <a href="" class="login-fb" style="display: none;">Login with Facebook</a>
-                  <a href="" id="btnSignInGG" class="login-gg">Sign in with Google</a>
-                  <a href="" >Quên mật khẩu</a>
-                  <div class="npf">
+                  <a href="#" id="btnSignInGG" class="login-gg">Sign in with Google</a>
+                  <a href="#" id="forget" >Quên mật khẩu</a>
+                  <div id="npf" class="npf">
                     <strong>Lợi ích khi đăng ký</strong>
                     <ul>
                       <li>Được giảm giá từ 3-10%</li>
@@ -72,6 +82,14 @@ $(document).ready(function(){
                   </div>
                 </div>
             </div> 
+            <div id="myaccount_out" class="account d-none">
+              <div class="text-center" style="width: 90px; height:55px;">
+                <a onclick="open_account('signout')" id="a_account_out" class="mt-1" style="display: block;" href="#" title="Tài khoản"><img src="../public/image/user.png" id="img_account_out"  alt=""><strong id="tk_out" style="color: rgb(196, 60, 65); display: block;"></strong></a>
+              </div>
+              <div id="signout" class="signin_dropdown d-none">
+                <a onclick="out_tk()" href="#" title="Sign in" class="sign-in">Đăng xuất</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>   
@@ -274,4 +292,39 @@ function updateCart(){
         document.getElementById('num').textContent = '('+cart.length+')';
     }
    }
+}
+
+let openAccount = false;
+function open_account(id){
+  openAccount = !openAccount;
+  if(openAccount){
+    console.log("add");
+    $(`#${id}`).removeClass('d-none');
+  }else{
+    $(`#${id}`).addClass('d-none');
+  }
+}
+
+window.addEventListener('click', (event) => {
+  let id = event.target.id;
+  if(!(id == 'signin' || id == "btnSignInGG" || id=="forget" || id == "npf" || id == "a_account" || id=="img_account" || id=="tk") && !$('#myaccount').hasClass('d-none')){
+    openAccount = false;
+    $('#signin').addClass('d-none');
+  }
+  if(!(id == 'signout' || id == "a_account_out" || id=="img_account_out"|| id=="tk_out")&&!$('#myaccount_out').hasClass('d-none')){
+    openAccount = false;
+    $('#signout').addClass('d-none');
+  }
+})
+
+function out_tk(){
+  // window.localStorage.setItem('account',JSON.stringify([{username: "hkt", password: "123456", login: true}]));
+   let account = window.localStorage.getItem('account');
+   console.log(account);
+   account = JSON.parse(account);
+   account = account[0];
+   account.login = false;
+   window.localStorage.setItem('account', JSON.stringify([account]));
+   $('#myaccount_out').addClass('d-none');
+   $('#myaccount').removeClass('d-none');
 }
