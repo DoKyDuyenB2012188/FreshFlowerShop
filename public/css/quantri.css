@@ -1,6 +1,15 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
   }
+body{
+  position: relative;
+}
+#form_update{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(246, 248, 250);
+}
   a:link,
   a:focus,
   a:visited {

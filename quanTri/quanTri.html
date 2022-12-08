@@ -21,72 +21,73 @@
     <title>Quản trị</title>
 </head>
 <body>
-  <div class="container-fluid p-0 m-0">
-    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-around w-100 " style="background-color: pink;">
-        <p style="color: #fff; padding: 0 10px;">Xin chào <a class="navbar-brand" href="#" style="color: yellow;">Admin</a></p>
-        <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="trangchu.html" style="color: #fff;">Trang chủ</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="trangchu.html" style="color: #fff;">Đăng xuất</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-  </div>
-  <div class="container">
-    <div class="row mt-2">
-      <div class="contentwrapper">
-        <div class="leftside">
-          <div class="groupbox">
-            <div class="title">Admin Menu</div>
-            <div class="leftmenu">
-              <ul>
-                <li><a href="">Cấu hình</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a href="">Tin tức</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a href="">Sản phẩm</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a href="">Đơn hàng</a></li>  
+  <div>
+    <div class="container-fluid p-0 m-0">
+      <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-around w-100 " style="background-color: pink;">
+          <p style="color: #fff; padding: 0 10px;">Xin chào <a class="navbar-brand" href="#" style="color: yellow;">Admin</a></p>
+          <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="trangchu.html" style="color: #fff;">Trang chủ</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="trangchu.html" style="color: #fff;">Đăng xuất</a>
+                  </li>
               </ul>
+          </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row mt-2">
+        <div class="contentwrapper">
+          <div class="leftside">
+            <div class="groupbox">
+              <div class="title">Admin Menu</div>
+              <div class="leftmenu">
+                <ul>
+                  <li><a href="">Cấu hình</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a href="">Tin tức</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a href="">Sản phẩm</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a href="">Đơn hàng</a></li>  
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-        <div class="maincontent">
-            <div class="groupbox">
-              <div class="title">Danh sách sản phẩm</div>
-              <div class="d-flex justify-content-between">
-                <p class="p-0 m-0 d-flex align-items-center">Số lượng sản phẩm:<span id="mount"></span></p>
-              <button>Thêm sản phẩm</button>
+          <div class="maincontent">
+              <div class="groupbox">
+                <div class="title">Danh sách sản phẩm</div>
+                <div class="d-flex justify-content-between">
+                  <p class="p-0 m-0 d-flex align-items-center">Số lượng sản phẩm:<span id="mount"></span></p>
+                <button>Thêm sản phẩm</button>
+                </div>
+                <table class="table table-bordered  ">
+                    <thead>
+                        <tr style="color: #fff; text-align:center;">
+                            <th>Ảnh đại diện</th>
+                            <th>Tên sản phẩm</th>
+                            <th>ID</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datarow">
+                        
+                    </tbody>
+                </table>
               </div>
-              <table class="table table-bordered  ">
-                  <thead>
-                      <tr style="color: #fff; text-align:center;">
-                          <th>Ảnh đại diện</th>
-                          <th>Tên sản phẩm</th>
-                          <th>ID</th>
-                          <th>Sửa</th>
-                          <th>Xóa</th>
-                      </tr>
-                  </thead>
-                  <tbody id="datarow">
-                      
-                  </tbody>
-              </table>
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
+    <!-- footer -->
+    
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </div>
-  <!-- footer -->
-  
-  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  
   <script type="text/javascript" src="../public/javascript/jQuery.js"></script>
   <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
   <script src="../shared/products.js"></script>

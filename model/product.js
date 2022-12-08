@@ -193,4 +193,7 @@ class Product {
   getAll(){
     return this.data
   }
+  save(data){
+    products = data;
+  }
 }

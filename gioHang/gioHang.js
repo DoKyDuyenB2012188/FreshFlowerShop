@@ -2,6 +2,7 @@ window.onload = () => {
   showCart();
   totalPrice();
 };
+// change fotmart price
 function changePrice(price) {
   ////2.000.000
   let result = "";
@@ -12,6 +13,7 @@ function changePrice(price) {
   }
   return Number(result);
 }
+// show item in cart
 function showCart() {
   let sp = window.localStorage.getItem("cart");
   console.log(sp);
@@ -66,7 +68,7 @@ function showCart() {
     document.getElementById("datarow").innerHTML = result;
   }
 }
-
+// plus number of item
 function plus(id) {
   let cart = window.localStorage.getItem("cart");
   let check = 0;
@@ -79,11 +81,11 @@ function plus(id) {
   });
   window.localStorage.setItem("cart", JSON.stringify(cart));
   document.getElementById(`num_${id}`).textContent = check;
-  updateCart();
+  updateCart(); // update cart is in hf.js
   showCart();
   totalPrice();
 }
-
+//delete  item
 function deleteCart(id) {
   let cart = window.localStorage.getItem("cart");
   if (cart) {
@@ -95,7 +97,7 @@ function deleteCart(id) {
     updateCart();
   }
 }
-
+// subtract number of item
 function sub(id) {
   let check = 1;
   let cart = window.localStorage.getItem("cart");
@@ -122,7 +124,7 @@ function totalPrice() {
   }
   document.getElementById("total").innerText = total;
 }
-
+//  pay cart
 function Thanh_Toan() {
   let sp = window.localStorage.getItem("cart");
   if (sp) {

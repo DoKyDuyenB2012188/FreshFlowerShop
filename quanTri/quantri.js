@@ -21,13 +21,13 @@ function show(){
         </td>
         <td>
             
-            <a onclick="delete_3()" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+            <a onclick="goto_updated('${all[i].id}')" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
                 <i class="fa fa-trash" aria-hidden="true"></i> sửa <ion-icon class="trash-outline" name="trash-outline"></ion-icon>
             </a>
         </td>
         <td>
             
-            <a onclick="delete_3()" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+            <a onclick="goto_delete('${all[i].id}')" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa <ion-icon class="trash-outline" name="trash-outline"></ion-icon>
             </a>
         </td>
@@ -36,4 +36,15 @@ function show(){
     document.getElementById('mount').textContent = all.length;
     document.getElementById('datarow').innerHTML = "";
     document.getElementById('datarow').innerHTML = proAll;
+}
+
+function goto_updated(id){
+    window.location.href = `./update.html?update=${id}`
+}
+function goto_delete(id){
+    alert('do');
+    let allProduct = new Product();
+    allProduct.deleteProduct(id);
+    allProduct.save(allProduct);
+    window.location.reload();
 }
