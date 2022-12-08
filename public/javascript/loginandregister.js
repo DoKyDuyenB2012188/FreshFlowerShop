@@ -67,7 +67,6 @@ function register() {
   return flag;
 }
 function Login() {
-  alert("sss");
   let frm = document.forms['login'];
   let email = frm.frm_Email;
   let matKhau = frm.frm_MatKhau;
