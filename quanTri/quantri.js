@@ -1,7 +1,7 @@
+var product_List = JSON.parse(localStorage.getItem('products'));
 window.onload = () => {
     show();
 }
-
 function show(){
 
     const product = new Product();
@@ -38,13 +38,20 @@ function show(){
     document.getElementById('datarow').innerHTML = proAll;
 }
 
+function handleClick(){
+    window.location.href = './updated.html';
+}
+
 function goto_updated(id){
     window.location.href = `./update.html?update=${id}`
 }
+
 function goto_delete(id){
-    alert('do');
-    let allProduct = new Product();
-    allProduct.deleteProduct(id);
-    allProduct.save(allProduct);
-    window.location.reload();
+    let all = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")): []
+    if(confirm("Bạn có chắc chắn muốn xóa "+id+" này không !...")){
+        all.splice(id, 1)
+    }
+    localStorage.setItem('products',JSON.stringify(all));
+    show()
+
 }

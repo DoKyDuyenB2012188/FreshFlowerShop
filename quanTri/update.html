@@ -19,14 +19,14 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5">Cập nhật sản phẩm</h2>
-          <form>
+          <form name="new_product" id="new_product">
             <div class="form-outline mb-2">
               <label class="form-label" for="name_sp">Tên sản phẩm</label>
-              <input type="email" id="name_sp" name="name_sp" class="form-control" />
+              <input type="text" id="name_sp" name="name_sp" class="form-control" />
             </div>
             <div class="form-outline mb-2">
               <label class="form-label" for="id">ID sản phẩm</label>
-              <input type="email" id="id" name="id" class="form-control" />
+              <input type="text" id="id" name="id" class="form-control" />
             </div>
             <div class="row">
               <div class="col-md-6 mb-2">
@@ -44,13 +44,13 @@
             </div>
             <div class="form-outline mb-2">
               <label class="form-label" for="image_sp">Hình ảnh</label>
-              <input type="file" id="image_sp" name="image_sp" class="form-control" />
+              <input type="text" id="image_sp" name="image_sp" class="form-control" />
             </div>
             <div class="col-md-6 mb-2">
               <label class="form-check-label" for="new">NEW</label>
-              <input class="form-check-input" type="checkbox" id="new">
+              <input class="form-check-input" type="checkbox" id="new" name="new">
               <label class="form-check-label" for="sale">SALE</label>
-              <input class="form-check-input" type="checkbox" id="sale">
+              <input class="form-check-input" type="checkbox" id="sale" name="sale">
             </div>
             <div class="form-outline mb-2">
               <label class="form-label" for="object">Đối tượng</label>
@@ -69,14 +69,18 @@
               <textarea placeholder="hoa hồng:5, hoa cúc:3,..." id="detail" class="form-control" ></textarea>
             </div>
             <div class="form-outline mb-2">
+              <label class="form-label" for="detail">Dịp</label>
+              <textarea placeholder="Hoa chúc mừng, hoa sinh nhật,..." id="occasion" name="occasion" class="form-control" ></textarea>
+            </div>
+            <div class="form-outline mb-2">
               <label class="form-label" for="des">Mô tả</label>
               <textarea id="des" class="form-control"></textarea>
             </div>
             <div class="d-flex justify-content-between">
-              <button type="submit" class="btn btn-primary btn-block mb-4">
+              <button onclick="addProduct()" type="submit" class="btn btn-primary btn-block mb-4">
                 Xác nhận
               </button>
-              <button type="submit" class="btn btn-danger btn-block mb-4">
+              <button onclick="huy()" type="submit" class="btn btn-danger btn-block mb-4">
                 Huỷ
               </button>
             </div>
@@ -91,6 +95,6 @@
   <script src="../public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
   <script src="../shared/products.js"></script>
   <script src="../model/product.js"></script>
-  <script src="./quantri.js"></script>
+  <script src="./updated.js"></script>
 </body>
 </html>
