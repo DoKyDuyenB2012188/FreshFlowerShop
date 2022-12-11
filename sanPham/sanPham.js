@@ -57,8 +57,6 @@ function toggler_menu(){
 
 function render_items(index){
     const product = new Product();
-    // console.log(filter_list);
-    // console.log(sort_Price);
     let cardList = product.filterProduct(filter_list);
     if(price != ""){
         let min = price.split('-')[0];
@@ -77,8 +75,6 @@ function render_items(index){
     lenght_products = cardList.length;
     let length = cardList.length > index ? index : cardList.length;
     current = length;
-    console.log(cardList);
-    console.log(current);
     if(cardList != []){
         document.getElementById('data_items').innerHTML = '';
         let dom = '';
@@ -111,7 +107,6 @@ function render_items(index){
                     </div>`;
         }
         document.getElementById('data_items').innerHTML = dom;
-        current = 32;
     }
 }
 function resetCount(){
@@ -143,6 +138,7 @@ function ChangeState(data, id){
     }
 }
 function ChangePrice(data, price_data){
+    resetCount();
     if(price != ""){
         $('#'+ price).removeClass('active_select');
     }
@@ -151,6 +147,7 @@ function ChangePrice(data, price_data){
     render_items(current);
 }
 function sortPrice(data, price_data){
+    resetCount();
     if(sort_Price != ""){
         $('#'+ sort_Price).removeClass('a_active');
         $('#'+sort_Price).addClass('a_animation');
@@ -166,6 +163,7 @@ function showMore(){
     $('.more').text(`Xem thêm, sản phẩm còn lại ${Number(lenght_products - current)}`);
 }
 function SetPrice(){
+    resetCount();
    let min = document.getElementById('low-price').value;
    let max = document.getElementById('high-price').value;
    new_price = min +'-'+max;

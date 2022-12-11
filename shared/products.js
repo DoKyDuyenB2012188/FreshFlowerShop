@@ -87,7 +87,7 @@ let products = [
 		],
 		color: [
 			"xanh",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - The Future - 5190",
@@ -199,7 +199,7 @@ let products = [
 		color: [
 			"xanh",
 			"hong",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Be All You Can Be - 2994",
@@ -626,7 +626,7 @@ let products = [
 		],
 		color: [
 			"xanh",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Premium vase 2 - 13307",
@@ -1736,7 +1736,7 @@ let products = [
 		],
 		color: [
 			"xanh",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Vươn xa - 11582",
@@ -2641,7 +2641,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Thắng lợi - 4049",
@@ -2757,7 +2757,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Thành Đạt - 5263",
@@ -3829,7 +3829,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Ngày may mắn - 11577",
@@ -3837,7 +3837,7 @@ let products = [
 			price: "1.650.000 đ",
 			descriptions: [
 				"Hoa hạnh phúc : 8",
-				"Hồng red naomi : 5",
+				"Hồng do naomi : 5",
 				"Hướng dương : 12",
 				"Lan vũ nữ: 5"
 			],
@@ -4436,7 +4436,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Đại Cát Đại Lợi 2 - 2489",
@@ -4614,7 +4614,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Congratulations 6 - 13412",
@@ -4989,7 +4989,7 @@ let products = [
 		style: [],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Niềm vui - 12579",
@@ -5721,7 +5721,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Đỉnh cao - 13113",
@@ -6077,7 +6077,7 @@ let products = [
 		],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Cutie bear and rose 5 - 13591",
@@ -6486,7 +6486,7 @@ let products = [
 		style: [],
 		color: [
 			"vang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Hoa tặng sự kiện 15(+20 bó) - 13289",
@@ -6861,7 +6861,7 @@ let products = [
 		],
 		color: [
 			"trang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Một tình yêu - 5419",
@@ -6872,7 +6872,7 @@ let products = [
 				"Hoa thạch thảo trắng: 3",
 				"Red Elegance : 1"
 			],
-			intro: "Sử dụng 1 cành hồng red elengance làm tâm điểm, bó hoa gửi đến một thông điệp ngọt ngào dành tặng cho người nhận rằng :\"Em là tình yêu duy nhất của anh\". Dù ngoài kia có bao nhiêu sóng gió thì tình yêu của chúng ta vẫn mãi luôn trường tồn và mãnh liệt như màu đỏ của loài hồng này."
+			intro: "Sử dụng 1 cành hồng do elengance làm tâm điểm, bó hoa gửi đến một thông điệp ngọt ngào dành tặng cho người nhận rằng :\"Em là tình yêu duy nhất của anh\". Dù ngoài kia có bao nhiêu sóng gió thì tình yêu của chúng ta vẫn mãi luôn trường tồn và mãnh liệt như màu đỏ của loài hồng này."
 		}
 	},
 	{
@@ -8053,7 +8053,7 @@ let products = [
 		],
 		color: [
 			"trang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Nhiệt huyết 3 - 13193",
@@ -9027,7 +9027,7 @@ let products = [
 		],
 		color: [
 			"trang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Vươn cao 2 - 12607",
@@ -9159,7 +9159,7 @@ let products = [
 		],
 		color: [
 			"trang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Be good - 12486",
@@ -9230,7 +9230,7 @@ let products = [
 		],
 		color: [
 			"trang",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Cầu hôn - 13251",
@@ -12062,7 +12062,7 @@ let products = [
 		],
 		color: [
 			"hong",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Tương Lai Rực Rỡ - 5436",
@@ -12466,9 +12466,9 @@ let products = [
 		}
 	},
 	{
-		id: "11561_red-and-pink",
+		id: "11561_do-and-pink",
 		nameCard: "Red and pink",
-		imageURL: "/hinh-hoa-tuoi/thumb/nguoi-yeu/11561_red-and-pink.jpg",
+		imageURL: "/hinh-hoa-tuoi/thumb/nguoi-yeu/11561_do-and-pink.jpg",
 		newprice: "1.700.000 đ",
 		oldprice: "1.750.000 đ",
 		newitem: false,
@@ -12733,7 +12733,7 @@ let products = [
 		],
 		color: [
 			"hong",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Gửi Người Tôi Yêu - 3197",
@@ -12770,7 +12770,7 @@ let products = [
 		],
 		color: [
 			"hong",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Điều Mong Ước - 6024",
@@ -12886,7 +12886,7 @@ let products = [
 		],
 		color: [
 			"hong",
-			"red"
+			"do"
 		],
 		detail: {
 			name_title: "Lover - Ngọt ngào 3 - 12528",
