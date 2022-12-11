@@ -38,9 +38,13 @@ function addProduct(){
 			"intro": des
 		}
 	}
+    let product_List = JSON.parse(localStorage.getItem('products'));
     product_List.push(obj);
     localStorage.setItem('products',JSON.stringify(product_List));
     console.log('Danh sách sản phẩm là: ');
     console.log(product_List);
-    show();
+}
+
+function huy(){
+    window.location.href = './quanTri.html';
 }
