@@ -57,10 +57,10 @@ function goto_delete(id) {
     : [];
     console.log(all);
   if (confirm("Bạn có chắc chắn muốn xóa " + id + " này không !...")) {
-    if(all.length == 1){
-        all= [];
+    if(all.length ==1){
+        all = [];
     }else{
-        all.splice(id, 1);
+        all = all.filter((el) => el.id != id);
     }
   }
   localStorage.setItem("products", JSON.stringify(all));
