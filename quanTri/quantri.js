@@ -51,11 +51,17 @@ function goto_updated(id) {
 }
 
 function goto_delete(id) {
+    console.log(id);
   let all = localStorage.getItem("products")
     ? JSON.parse(localStorage.getItem("products"))
     : [];
+    console.log(all);
   if (confirm("Bạn có chắc chắn muốn xóa " + id + " này không !...")) {
-    all.splice(id, 1);
+    if(all.length == 1){
+        all= [];
+    }else{
+        all.splice(id, 1);
+    }
   }
   localStorage.setItem("products", JSON.stringify(all));
   show();
