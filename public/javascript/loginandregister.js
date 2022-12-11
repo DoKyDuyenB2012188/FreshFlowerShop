@@ -64,7 +64,8 @@ function register() {
     );
     alert("Bạn đã đăng ký thành công");
   }
-  return flag;
+
+  window.location.href = './loginandregister.html';
 }
 function Login() {
   let frm = document.forms['login'];
