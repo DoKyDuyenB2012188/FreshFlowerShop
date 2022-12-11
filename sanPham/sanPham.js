@@ -57,12 +57,13 @@ function toggler_menu(){
 
 function render_items(index){
     const product = new Product();
+    // console.log(filter_list);
     // console.log(sort_Price);
     let cardList = product.filterProduct(filter_list);
     if(price != ""){
         let min = price.split('-')[0];
         let max = price.split('-')[1];
-        cardList = product.findPrice(min, max, cardList);
+        cardList = product.findPrice(min, max, cardList);// rỗng
     }
     if(sort_Price == 'maxtomin'){
         cardList = product.sortMaxToMin(cardList);
@@ -76,6 +77,8 @@ function render_items(index){
     lenght_products = cardList.length;
     let length = cardList.length > index ? index : cardList.length;
     current = length;
+    console.log(cardList);
+    console.log(current);
     if(cardList != []){
         document.getElementById('data_items').innerHTML = '';
         let dom = '';
@@ -108,6 +111,7 @@ function render_items(index){
                     </div>`;
         }
         document.getElementById('data_items').innerHTML = dom;
+        current = 32;
     }
 }
 function resetCount(){
